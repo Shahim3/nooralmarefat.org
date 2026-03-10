@@ -2,21 +2,27 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>نورُ المعرفة – مؤسسة للعرب في أفغانستان</title>
+    <title>Noor Al Marefat – نورُ المعرفة Foundation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="Noor Al Marefat Foundation – raising awareness for the Arab minority in Afghanistan and preserving Arabic language and culture.">
 
-    <!-- Arabische Web-Schrift -->
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Vazirmatn:wght@300;400;600&display=swap"
+          rel="stylesheet">
 
     <style>
         :root {
-            --bg-dark: #020617;
-            --bg-soft: #0b1120;
-            --primary: #0f766e;
-            --primary-soft: #0d9488;
-            --accent: #facc15;
-            --border-soft: rgba(148,163,184,0.4);
-            --text-muted: #9ca3af;
+            --primary: #0D5C3A;
+            --primary-dark: #064E3B;
+            --gold: #FACC15;
+            --gold-soft: rgba(250, 204, 21, 0.12);
+            --bg: #020617;
+            --bg-alt: #0f172a;
+            --glass: rgba(15, 23, 42, 0.75);
+            --border-glass: rgba(148, 163, 184, 0.45);
+            --muted: #9ca3af;
+            --text: #e5e7eb;
         }
 
         * {
@@ -31,10 +37,22 @@
 
         body {
             font-family: 'Tajawal', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: radial-gradient(circle at top, #0f172a 0, #020617 60%, #000 100%);
-            color: #f9fafb;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(34, 197, 94, 0.25), transparent 55%),
+                radial-gradient(circle at 85% 80%, rgba(250, 204, 21, 0.18), transparent 55%),
+                linear-gradient(to bottom, #020617, #020617 40%, #020617 100%);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        body.rtl {
             direction: rtl;
             text-align: right;
+        }
+
+        body.ltr {
+            direction: ltr;
+            text-align: left;
         }
 
         a {
@@ -43,26 +61,25 @@
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1120px;
             margin: 0 auto;
-            padding: 1.5rem 1.25rem 3rem;
+            padding: 1rem 1.25rem 3rem;
         }
 
-        /* ---------------- Header ---------------- */
-
+        /* HEADER */
         header {
             position: sticky;
             top: 0;
-            z-index: 50;
-            backdrop-filter: blur(14px);
-            background: rgba(15,23,42,0.96);
-            border-bottom: 1px solid var(--border-soft);
+            z-index: 40;
+            backdrop-filter: blur(18px);
+            background: linear-gradient(to left, rgba(15,23,42,0.96), rgba(15,23,42,0.9));
+            border-bottom: 1px solid rgba(15,23,42,0.9);
         }
 
         .header-inner {
-            max-width: 1100px;
+            max-width: 1120px;
             margin: 0 auto;
-            padding: 0.75rem 1.25rem;
+            padding: 0.8rem 1.25rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -76,288 +93,333 @@
         }
 
         .brand-mark {
-            width: 42px;
-            height: 42px;
+            width: 44px;
+            height: 44px;
             border-radius: 999px;
-            background: radial-gradient(circle at 30% 30%, #fefce8, #facc15 40%, #15803d 80%);
-            border: 2px solid rgba(250,204,21,0.8);
-            box-shadow: 0 0 18px rgba(250,204,21,0.7);
+            background: radial-gradient(circle at 30% 30%, #fefce8, #facc15 40%, #15803d 85%);
+            border: 2px solid rgba(250, 204, 21, 0.8);
+            box-shadow: 0 0 25px rgba(250, 204, 21, 0.45);
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 800;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             color: #022c22;
         }
 
         .brand-text-main {
-            font-size: 1.1rem;
             font-weight: 700;
             letter-spacing: 0.03em;
         }
 
         .brand-text-sub {
-            font-size: 0.8rem;
-            color: var(--text-muted);
+            font-size: 0.78rem;
+            color: var(--muted);
         }
 
         nav {
             display: flex;
-            gap: 1rem;
+            align-items: center;
+            gap: 1.5rem;
             font-size: 0.9rem;
         }
 
-        nav a {
-            padding: 0.4rem 0.9rem;
+        .nav-links a {
+            padding: 0.4rem 0.75rem;
             border-radius: 999px;
             border: 1px solid transparent;
             color: #e5e7eb;
+            transition: all 0.2s ease;
         }
 
-        nav a:hover {
-            border-color: rgba(148,163,184,0.7);
-            background: rgba(15,23,42,0.9);
+        .nav-links a:hover {
+            border-color: rgba(148, 163, 184, 0.7);
+            background: rgba(15, 23, 42, 0.85);
         }
 
-        .nav-cta {
-            background: linear-gradient(to left, var(--accent), #fbbf24);
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.2rem;
+            border-radius: 999px;
+            background: rgba(15,23,42,0.95);
+            border: 1px solid rgba(51,65,85,0.9);
+        }
+
+        .lang-btn {
+            padding: 0.25rem 0.65rem;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            border: none;
+            background: transparent;
+            color: #e5e7eb;
+            cursor: pointer;
+            transition: all 0.18s ease;
+        }
+
+        .lang-btn.active {
+            background: linear-gradient(to left, var(--gold), #facc15);
             color: #111827;
             font-weight: 600;
+            box-shadow: 0 0 14px rgba(250, 204, 21, 0.55);
         }
 
-        .nav-cta:hover {
-            filter: brightness(1.04);
-        }
-
-        /* ---------------- Hero ---------------- */
-
+        /* HERO */
         .hero {
-            padding: 3rem 0 2.5rem;
+            padding: 2.75rem 0 2rem;
+        }
+
+        .hero-grid {
             display: grid;
-            grid-template-columns: minmax(0, 3fr) minmax(0, 2.3fr);
-            gap: 2rem;
+            grid-template-columns: minmax(0, 1.35fr) minmax(0, 1.05fr);
+            gap: 2.25rem;
             align-items: center;
         }
 
-        .hero-kicker {
+        .kicker {
             font-size: 0.9rem;
-            color: var(--accent);
-            margin-bottom: 0.6rem;
+            color: var(--gold);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            align-items: center;
+            margin-bottom: 0.9rem;
+        }
+
+        .kicker-pill {
+            padding: 0.15rem 0.6rem;
+            border-radius: 999px;
+            border: 1px solid rgba(250, 204, 21, 0.6);
+            background: rgba(23,37,84,0.8);
+            font-size: 0.75rem;
         }
 
         .hero-title {
-            font-size: clamp(2.1rem, 3vw, 2.7rem);
-            line-height: 1.4;
-            margin-bottom: 1rem;
+            font-size: clamp(2.2rem, 3.3vw, 2.8rem);
+            line-height: 1.35;
+            margin-bottom: 0.9rem;
         }
 
-        .hero-title span {
-            color: var(--accent);
+        .hero-title span.highlight {
+            background: linear-gradient(to left, var(--gold), #fef08a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .hero-text {
+        .hero-subtitle {
             font-size: 1rem;
-            color: var(--text-muted);
+            color: var(--muted);
             line-height: 1.9;
-            margin-bottom: 1.4rem;
+            margin-bottom: 1.7rem;
         }
 
         .hero-actions {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.8rem;
-            margin-bottom: 1rem;
+            gap: 0.85rem;
+            margin-bottom: 1.4rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+            padding: 0.75rem 1.4rem;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
         }
 
         .btn-primary {
-            padding: 0.75rem 1.5rem;
-            border-radius: 999px;
-            border: none;
-            background: linear-gradient(to left, var(--primary), var(--primary-soft));
-            color: #ecfdf5;
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            box-shadow: 0 12px 28px rgba(15,118,110,0.5);
+            background: linear-gradient(to left, var(--gold), #facc15);
+            color: #111827;
+            box-shadow: 0 14px 32px rgba(250, 204, 21, 0.4);
         }
 
         .btn-primary:hover {
-            filter: brightness(1.06);
+            filter: brightness(1.04);
             transform: translateY(-1px);
         }
 
         .btn-secondary {
-            padding: 0.75rem 1.5rem;
-            border-radius: 999px;
-            border: 1px solid var(--border-soft);
-            background: rgba(15,23,42,0.9);
+            background: rgba(15, 23, 42, 0.9);
+            border-color: rgba(148, 163, 184, 0.7);
             color: #e5e7eb;
-            font-size: 0.95rem;
-            cursor: pointer;
         }
 
         .btn-secondary:hover {
-            background: rgba(30,41,59,0.95);
+            background: rgba(30, 41, 59, 0.95);
         }
 
         .hero-note {
-            font-size: 0.85rem;
-            color: var(--text-muted);
+            font-size: 0.82rem;
+            color: var(--muted);
         }
 
+        /* Hero card */
         .hero-card {
-            background: radial-gradient(circle at top, #0f172a, #020617 70%);
-            border-radius: 1.5rem;
-            padding: 1.5rem;
-            border: 1px solid var(--border-soft);
-            box-shadow: 0 20px 45px rgba(15,23,42,0.9);
+            background: radial-gradient(circle at top, rgba(148, 163, 184, 0.35), #020617 70%);
+            border-radius: 1.4rem;
+            padding: 1.6rem 1.5rem;
+            border: 1px solid rgba(55, 65, 81, 0.9);
+            box-shadow: 0 22px 60px rgba(15, 23, 42, 0.9);
         }
 
         .hero-card-badge {
             display: inline-flex;
             align-items: center;
             gap: 0.4rem;
-            padding: 0.2rem 0.7rem;
+            padding: 0.25rem 0.7rem;
             border-radius: 999px;
-            border: 1px solid rgba(34,197,94,0.7);
-            background: rgba(22,163,74,0.1);
+            background: rgba(15,118,110,0.2);
+            border: 1px solid rgba(34,197,94,0.75);
             font-size: 0.75rem;
             color: #bbf7d0;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.9rem;
         }
 
         .hero-card-main {
-            font-size: 1.05rem;
-            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            margin-bottom: 1.1rem;
         }
 
         .stat-row {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.75rem;
+            gap: 0.8rem;
             margin-bottom: 1rem;
         }
 
         .stat-card {
             flex: 1 1 120px;
-            background: rgba(15,23,42,0.96);
+            background: rgba(15,23,42,0.95);
             border-radius: 0.9rem;
-            padding: 0.85rem 0.9rem;
-            border: 1px solid rgba(55,65,81,0.9);
+            padding: 0.8rem 0.9rem;
+            border: 1px solid rgba(55,65,81,0.95);
         }
 
         .stat-number {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             font-weight: 700;
-            color: var(--accent);
-            margin-bottom: 0.1rem;
+            color: var(--gold);
+            margin-bottom: 0.15rem;
         }
 
         .stat-label {
             font-size: 0.8rem;
-            color: var(--text-muted);
+            color: var(--muted);
         }
 
         .trust-text {
-            font-size: 0.8rem;
-            color: var(--text-muted);
+            font-size: 0.82rem;
+            color: var(--muted);
         }
 
-        /* ---------------- Sections ---------------- */
-
+        /* Sections */
         section {
-            margin-top: 2.6rem;
+            margin-top: 2.9rem;
         }
 
         .section-label {
-            font-size: 0.85rem;
-            color: var(--accent);
+            font-size: 0.82rem;
+            color: var(--gold);
             margin-bottom: 0.35rem;
         }
 
         .section-title {
             font-size: 1.4rem;
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.35rem;
         }
 
         .section-subtitle {
             font-size: 0.95rem;
-            color: var(--text-muted);
+            color: var(--muted);
             margin-bottom: 1.4rem;
-            line-height: 1.9;
+            line-height: 1.8;
         }
 
         .grid-2 {
             display: grid;
-            grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr);
-            gap: 1.7rem;
+            grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.05fr);
+            gap: 1.8rem;
         }
 
         .card {
-            background: rgba(15,23,42,0.96);
-            border-radius: 1.2rem;
-            padding: 1.4rem 1.5rem;
-            border: 1px solid rgba(55,65,81,0.9);
+            background: rgba(15,23,42,0.95);
+            border-radius: 1.25rem;
+            padding: 1.5rem 1.5rem;
+            border: 1px solid rgba(55,65,81,0.96);
         }
 
         .card-title {
-            font-size: 1.05rem;
+            font-size: 1.02rem;
             margin-bottom: 0.6rem;
         }
 
         .card-body {
-            font-size: 0.95rem;
+            font-size: 0.93rem;
+            line-height: 1.8;
             color: #e5e7eb;
-            line-height: 1.9;
         }
 
         ul {
             list-style: none;
-            margin-top: 0.4rem;
-        }
-
-        ul li::before {
-            content: "•";
-            margin-left: 0.25rem;
-            color: var(--accent);
+            margin-top: 0.5rem;
         }
 
         ul li {
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.35rem;
+            position: relative;
+            padding-inline-start: 0.9rem;
         }
 
-        /* ---------------- Media ---------------- */
+        body.rtl ul li::before {
+            content: "•";
+            position: absolute;
+            right: 0;
+            color: var(--gold);
+        }
 
+        body.ltr ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        /* Media */
         .media-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1.2rem;
+            gap: 1.4rem;
         }
 
         .media-card {
-            background: linear-gradient(to bottom, #020617, #020617);
-            border-radius: 1.1rem;
-            padding: 1rem 1.1rem 1.1rem;
-            border: 1px solid rgba(51,65,85,0.9);
+            background: radial-gradient(circle at top, rgba(30,64,175,0.45), rgba(15,23,42,0.98));
+            border-radius: 1.2rem;
+            padding: 1rem 1.05rem 1.15rem;
+            border: 1px solid rgba(55,65,81,0.9);
             display: flex;
             flex-direction: column;
-            gap: 0.6rem;
-        }
-
-        .media-card h3 {
-            font-size: 0.95rem;
+            gap: 0.75rem;
         }
 
         .media-tag {
             font-size: 0.78rem;
-            color: var(--text-muted);
+            color: var(--muted);
         }
 
         .embed-placeholder {
             flex: 1;
             border-radius: 0.9rem;
-            border: 1px dashed rgba(148,163,184,0.6);
-            background: radial-gradient(circle at top, rgba(55,65,81,0.7), rgba(15,23,42,0.95));
+            border: 1px dashed rgba(148,163,184,0.7);
+            background: radial-gradient(circle at top, rgba(55,65,81,0.8), rgba(15,23,42,0.96));
             display: flex;
             align-items: center;
             justify-content: center;
@@ -375,296 +437,498 @@
             gap: 0.25rem;
         }
 
-        /* ---------------- Contact ---------------- */
-
+        /* Contact */
         .highlight-box {
-            background: radial-gradient(circle at top right, rgba(20,184,166,0.18), rgba(6,78,59,0.98));
-            border-radius: 1.3rem;
+            background: radial-gradient(circle at top right, var(--gold-soft), rgba(6,95,70,0.96));
+            border-radius: 1.35rem;
             padding: 1.4rem 1.5rem;
-            border: 1px solid rgba(45,212,191,0.8);
+            border: 1px solid rgba(250,204,21,0.8);
         }
 
-        .highlight-box strong {
-            color: #ecfeff;
-        }
-
-        .info-box {
-            margin-top: 0.9rem;
-            padding: 0.9rem 1rem;
-            border-radius: 1rem;
+        .email-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.45rem 0.9rem;
+            border-radius: 999px;
             background: rgba(15,23,42,0.96);
-            border: 1px dashed rgba(148,163,184,0.85);
+            border: 1px solid rgba(148,163,184,0.85);
+            margin-top: 0.8rem;
             font-size: 0.9rem;
-            color: #e5e7eb;
-            line-height: 1.9;
-        }
-
-        .email-link {
-            font-weight: 600;
-            color: var(--accent);
         }
 
         footer {
             margin-top: 2.7rem;
             padding-top: 1.4rem;
-            border-top: 1px solid rgba(31,41,55,0.9);
+            border-top: 1px solid rgba(31,41,55,0.95);
             font-size: 0.8rem;
-            color: var(--text-muted);
+            color: var(--muted);
             display: flex;
             flex-wrap: wrap;
-            gap: 0.7rem;
+            gap: 0.75rem;
             justify-content: space-between;
         }
 
-        /* ---------------- Responsive ---------------- */
+        .footer-links {
+            display: flex;
+            gap: 0.75rem;
+        }
 
+        .footer-links a {
+            color: #cbd5f5;
+        }
+
+        /* Responsive */
         @media (max-width: 900px) {
-            .hero {
+            .hero-grid {
                 grid-template-columns: minmax(0, 1fr);
             }
+
             .hero-card {
                 order: -1;
             }
+
             nav {
-                display: none;
+                gap: 0.9rem;
             }
         }
 
         @media (max-width: 768px) {
+            .container {
+                padding-inline: 1rem;
+            }
+
             .grid-2 {
                 grid-template-columns: minmax(0, 1fr);
             }
+
             .media-grid {
                 grid-template-columns: minmax(0, 1fr);
             }
-            .container {
+
+            .header-inner {
                 padding-inline: 1rem;
+            }
+
+            .nav-links {
+                display: none;
             }
         }
     </style>
 </head>
-<body>
+
+<body class="rtl">
 <header>
     <div class="header-inner">
-        <a href="#top" class="brand">
+        <div class="brand">
             <div class="brand-mark">ن</div>
             <div>
                 <div class="brand-text-main">نورُ المعرفة</div>
-                <div class="brand-text-sub">مبادرة للعرب في أفغانستان</div>
+                <div class="brand-text-sub" data-lang-block="ar">مبادرة للعرب في أفغانستان</div>
+                <div class="brand-text-sub" data-lang-block="en" style="display:none;">Initiative for Arabs in Afghanistan</div>
+                <div class="brand-text-sub" data-lang-block="fa" style="display:none;">ابتکار برای عرب‌های افغانستان</div>
             </div>
-        </a>
+        </div>
+
         <nav>
-            <a href="#about">من نحن</a>
-            <a href="#mission">رسالتنا</a>
-            <a href="#media">الصور والفيديو</a>
-            <a href="#contact" class="nav-cta">تواصل معنا</a>
+            <div class="nav-links">
+                <a href="#about" data-lang-block="ar">من نحن</a>
+                <a href="#media" data-lang-block="ar">الصور والفيديو</a>
+                <a href="#contact" data-lang-block="ar">تواصل</a>
+
+                <a href="#about" data-lang-block="en" style="display:none;">About</a>
+                <a href="#media" data-lang-block="en" style="display:none;">Media</a>
+                <a href="#contact" data-lang-block="en" style="display:none;">Contact</a>
+
+                <a href="#about" data-lang-block="fa" style="display:none;">درباره ما</a>
+                <a href="#media" data-lang-block="fa" style="display:none;">رسانه</a>
+                <a href="#contact" data-lang-block="fa" style="display:none;">ارتباط</a>
+            </div>
+
+            <div class="lang-switch">
+                <button class="lang-btn active" data-set-lang="ar">العربية</button>
+                <button class="lang-btn" data-set-lang="en">English</button>
+                <button class="lang-btn" data-set-lang="fa">فارسی</button>
+            </div>
         </nav>
     </div>
 </header>
 
-<main id="top" class="container">
-    <!-- Hero -->
-    <section class="hero">
-        <div>
-            <div class="hero-kicker">يا أهل الخير في السعودية والعالم العربي</div>
-            <h1 class="hero-title">
-                <span>نورُ المعرفة</span> يساند العرب المحتاجين<br>
-                ويُحيي اللغة العربية في أفغانستان
-            </h1>
-            <p class="hero-text">
-                نخدم العوائل العربية المحتاجة في أفغانستان، نوصل لهم السلال الغذائية حتى باب البيت،
-                ونعمل على تعليم <strong>اللغة العربية</strong> والقرآن والثقافة الأصيلة لأطفالهم وشبابهم.
-                في هذه المرحلة نحتاج قبل كل شيء إلى <strong>انتباهكم ومشاركتكم</strong>.
-            </p>
-            <div class="hero-actions">
-                <a href="mailto:info@nooralmarefat.org" class="btn-primary">📧 تواصل معنا عبر البريد</a>
-                <a href="#media" class="btn-secondary">👁️ شاهد الصور والفيديوهات</a>
-            </div>
-            <p class="hero-note">
-                شارك هذه الصفحة مع أهلك وأصحابك في السعودية والخليج والعالم العربي – كل مشاركة ترفع صوت العرب في أفغانستان.
-            </p>
-        </div>
-
-        <aside class="hero-card">
-            <div class="hero-card-badge">
-                <span>📱</span>
-                <span>توثيق مستمر بالصور والفيديو</span>
-            </div>
-            <p class="hero-card-main">
-                تقريبًا <strong>١٠ ملايين عربي</strong> يعيشون في أفغانستان. نركز على الغذاء اليوم،
-                وعلى اللغة والهوية للمستقبل.
-            </p>
-            <div class="stat-row">
-                <div class="stat-card">
-                    <div class="stat-number">من البيت للبيت</div>
-                    <div class="stat-label">نوصل السلال الغذائية مباشرة للعوائل المحتاجة</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">لغة وثقافة</div>
-                    <div class="stat-label">دروس عربية وقرآن للأطفال والشباب العرب</div>
-                </div>
-            </div>
-            <p class="trust-text">
-                نشارك ما نستطيع من صور وفيديو على المنصات؛ الشفافية والوضوح أساس ثقتكم بنا.
-                لأي استفسار أو توضيح تواصلوا معنا على <strong>info@nooralmarefat.org</strong>.
-            </p>
-        </aside>
-    </section>
-
-    <!-- About & Mission -->
-    <section id="about">
-        <div class="section-label">من نحن</div>
-        <h2 class="section-title">مبادرة عربية لأجل العرب في أفغانستان</h2>
-        <p class="section-subtitle">
-            نورُ المعرفة هي مبادرة أهلية تهدف إلى الوقوف مع العرب في أفغانستان في جانبين أساسيين:
-            الكرامة المعيشية، والهوية اللغوية والثقافية.
-        </p>
-
-        <div class="grid-2">
-            <div class="card">
-                <h3 class="card-title">ماذا نفعل على الأرض؟</h3>
-                <div class="card-body">
-                    <ul>
-                        <li>تجهيز وتوزيع <strong>سلال غذائية</strong> للعوائل العربية المحتاجة.</li>
-                        <li>زيارة البيوت لسماع احتياج الناس والتأكد من وصول المساعدة لمستحقيها.</li>
-                        <li>التنسيق مع أهل الخير والمحليين لتنظيم حملات توزيع منظمة.</li>
-                    </ul>
-                    <p style="margin-top:0.6rem;">
-                        لا نجمع تبرعات مباشرة عبر الموقع حاليًا؛ هدفنا التعريف بالواقع
-                        وبناء شبكة من المهتمين في العالم العربي.
+<main class="container">
+    <!-- HERO -->
+    <section class="hero" id="top">
+        <div class="hero-grid">
+            <div>
+                <!-- AR HERO -->
+                <div class="lang-block" data-lang="ar">
+                    <div class="kicker">
+                        <span class="kicker-pill">نحتاج انتباهكم من العالم العربي</span>
+                        <span>يا جماعة الخير في السعودية والخليج</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="highlight">نورُ المعرفة</span><br>
+                        صوت العرب في أفغانستان<br>
+                        لإحياء لغتنا وثقافتنا
+                    </h1>
+                    <p class="hero-subtitle">
+                        نخدم العوائل العربية المحتاجة في أفغانستان بإيصال الغذاء للبيوت،
+                        ونعمل على تعليم اللغة العربية وثقافتنا الأصيلة للجيل الجديد.
+                        حاليًا لا نستقبل تبرعات، بل نبحث عن <strong>الوعي والدعم المعنوي</strong> من العالم العربي.
                     </p>
                 </div>
-            </div>
 
-            <div class="card" id="mission">
-                <h3 class="card-title">رؤيتنا للمستقبل</h3>
-                <div class="card-body">
-                    <ul>
-                        <li>إحياء اللغة العربية في البيوت والمدارس والمساجد بين العرب في أفغانستان.</li>
-                        <li>تثبيت قيمنا العربية الإسلامية من كرم وتكافل واحترام.</li>
-                        <li>بناء جسور تواصل بين المجتمعات العربية في الخليج والعرب هناك.</li>
-                    </ul>
-                    <p style="margin-top:0.6rem;">
-                        نؤمن أن اللغة والمعرفة نور، ومن هنا جاء اسمنا: <strong>نورُ المعرفة</strong>.
+                <!-- EN HERO -->
+                <div class="lang-block" data-lang="en" style="display:none;">
+                    <div class="kicker">
+                        <span class="kicker-pill">Raising awareness across the Arab world</span>
+                        <span>For the Arab minority in Afghanistan</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="highlight">Noor Al Marefat</span><br>
+                        A voice for Arabs in Afghanistan<br>
+                        preserving language and identity
+                    </h1>
+                    <p class="hero-subtitle">
+                        We support vulnerable Arab families in Afghanistan with home‑delivered food
+                        and work to revive Arabic language and culture among the younger generation.
+                        At this stage we are <strong>not collecting donations</strong> – our priority is
+                        awareness, visibility and future partnerships.
                     </p>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Media -->
-    <section id="media">
-        <div class="section-label">الصور والفيديو</div>
-        <h2 class="section-title">شاهد الواقع بعينك</h2>
-        <p class="section-subtitle">
-            ننشر بشكل مستمر صورًا ومقاطع قصيرة من توزيع السلال وزياراتنا للعوائل،
-            وأنشطة تعليم اللغة العربية. هنا مكان مخصص لعرض هذه المواد من حساباتنا في المنصات المختلفة.
-        </p>
-
-        <div class="media-grid">
-            <article class="media-card">
-                <h3>آخر الصور من إنستغرام</h3>
-                <div class="media-tag">يوميات التوزيع وزيارات البيوت</div>
-                <div class="embed-placeholder">
-                    <!-- Hier später Instagram-Embed einfügen -->
-                    <p>
-                        هنا نضع كود التضمين من إنستغرام<br>
-                        (Instagram Embed Code)<br>
-                        لعرض أحدث الصور مباشرة من حسابنا.
+                <!-- FA HERO -->
+                <div class="lang-block" data-lang="fa" style="display:none;">
+                    <div class="kicker">
+                        <span class="kicker-pill">نیاز به توجه جهان عرب و منطقه</span>
+                        <span>برای عرب‌های افغانستان</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="highlight">بنیاد نورُ المعرفة</span><br>
+                        صدای عرب‌های افغانستان<br>
+                        برای حفظ زبان و هویت
+                    </h1>
+                    <p class="hero-subtitle">
+                        ما به خانواده‌های عرب نیازمند در افغانستان با رساندن مواد غذایی به خانه‌ها کمک می‌کنیم
+                        و برای آموزش زبان عربی و فرهنگ اصیل به نسل جوان تلاش می‌کنیم.
+                        در حال حاضر <strong>کمک مالی جمع‌آوری نمی‌کنیم</strong> و تمرکز ما بر آگاهی و ارتباط است.
                     </p>
                 </div>
-                <a href="https://instagram.com/USERNAME" target="_blank" class="media-link">
-                    زيارة حساب إنستغرام <span>↗</span>
-                </a>
-            </article>
 
-            <article class="media-card">
-                <h3>مقاطع من فيسبوك</h3>
-                <div class="media-tag">تغطيات موسعة للحملات</div>
-                <div class="embed-placeholder">
-                    <!-- Hier später Facebook-Embed einfügen -->
-                    <p>
-                        هنا نضع كود التضمين من فيسبوك<br>
-                        (Facebook Page / Video Embed)<br>
-                        لعرض المقاطع مباشرة من صفحتنا.
-                    </p>
+                <div class="hero-actions">
+                    <a href="mailto:info@nooralmarefat.org" class="btn btn-primary">
+                        📧 info@nooralmarefat.org
+                    </a>
+                    <a href="#media" class="btn btn-secondary">
+                        👁️ عرض الصور / View media
+                    </a>
                 </div>
-                <a href="https://facebook.com/USERNAME" target="_blank" class="media-link">
-                    زيارة صفحة فيسبوك <span>↗</span>
-                </a>
-            </article>
-
-            <article class="media-card">
-                <h3>لقطات قصيرة من تيك توك</h3>
-                <div class="media-tag">قصص سريعة من الميدان</div>
-                <div class="embed-placeholder">
-                    <!-- Hier später TikTok-Embed einfügen -->
-                    <p>
-                        هنا نضع كود التضمين من تيك توك<br>
-                        (TikTok Embed)<br>
-                        لعرض المقاطع القصيرة الجديدة.
-                    </p>
-                </div>
-                <a href="https://www.tiktok.com/@USERNAME" target="_blank" class="media-link">
-                    زيارة حساب تيك توك <span>↗</span>
-                </a>
-            </article>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-        <div class="section-label">التواصل والتعاون</div>
-        <h2 class="section-title">نحتاج انتباهكم ومشورتكم</h2>
-        <p class="section-subtitle">
-            إذا كنت من السعودية أو أي دولة عربية وتحب تعرف أكثر عن وضع العرب في أفغانستان
-            أو ترى إمكانية للتعاون، يسعدنا تواصلك معنا.
-        </p>
-
-        <div class="grid-2">
-            <div class="highlight-box">
-                <p>
-                    <strong>كيف تساعدنا الآن؟</strong><br>
-                    أهم دعم في هذه المرحلة هو نشر المعرفة عن وضع العرب في أفغانستان:
+                <p class="hero-note">
+                    شارك هذه الصفحة مع من تعرف في السعودية، الخليج، وأوروبا – كل مشاركة تعطي صوتًا للعرب في أفغانستان.
                 </p>
-                <ul style="margin-top:0.5rem;">
-                    <li>مشاركة رابط هذه الصفحة مع العائلة والأصدقاء.</li>
-                    <li>نقل الفكرة لمشايخ، مؤسسات خيرية، أو أشخاص مؤثرين في بلدك.</li>
-                    <li>إرسال اقتراحاتكم وخبرتكم لنا عبر البريد.</li>
-                </ul>
             </div>
 
-            <div class="card">
-                <h3 class="card-title">بيانات التواصل الرئيسية</h3>
-                <div class="card-body">
-                    <div class="info-box">
-                        <p><strong>البريد الإلكتروني الرسمي:</strong></p>
-                        <p style="margin-top:0.3rem;">
-                            <a href="mailto:info@nooralmarefat.org" class="email-link">info@nooralmarefat.org</a>
-                        </p>
-                        <p style="margin-top:0.7rem;">
-                            راسلنا للتعريف، طرح فكرة، أو طلب مزيد من المعلومات حول المشاريع
-                            والأنشطة. نسعى للرد في أسرع وقت ممكن إن شاء الله.
-                        </p>
+            <aside class="hero-card">
+                <div class="hero-card-badge">
+                    <span>🔎</span>
+                    <span>مبادرة توثيق ووعي، لا جمع تبرعات حاليًا</span>
+                </div>
+                <p class="hero-card-main">
+                    يوجد ما يُقدر بـ<strong>١٠ ملايين عربي</strong> في أفغانستان.
+                    نعمل على إبقاء لغتهم وثقافتهم حيّة من خلال الغذاء، التعليم، والرواية الصادقة لقصصهم.
+                </p>
+                <div class="stat-row">
+                    <div class="stat-card">
+                        <div class="stat-number">١٠ مليون</div>
+                        <div class="stat-label">عربي تقريبًا في أفغانستان</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">غذاء ومعرفة</div>
+                        <div class="stat-label">دعم مادي وثقافي معًا</div>
+                    </div>
+                </div>
+                <p class="trust-text">
+                    هذه صفحة تعريفية ووسيلة تواصل فقط. لأي استفسار رسمي أو للتعاون، يرجى مراسلتنا على
+                    <strong>info@nooralmarefat.org</strong>.
+                </p>
+            </aside>
+        </div>
+    </section>
+
+    <!-- ABOUT / MISSION -->
+    <section id="about">
+        <!-- Arabic -->
+        <div class="lang-block" data-lang="ar">
+            <div class="section-label">من نحن</div>
+            <h2 class="section-title">مبادرة نورُ المعرفة للعرب في أفغانستان</h2>
+            <p class="section-subtitle">
+                مبادرة أهلية تسعى لدعم العرب في أفغانستان إنسانيًا وثقافيًا. نؤمن أن الغذاء يحفظ الكرامة اليوم،
+                وأن اللغة والمعرفة تحفظ الهوية غدًا.
+            </p>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3 class="card-title">ماذا نفعل ميدانيًا؟</h3>
+                    <div class="card-body">
+                        <ul>
+                            <li>الوصول إلى العوائل العربية الأشد احتياجًا في مناطق مختلفة من أفغانستان.</li>
+                            <li>تنظيم حملات لتجهيز السلال الغذائية وإيصالها للبيوت.</li>
+                            <li>دعم مبادرات تعليم اللغة العربية والقرآن للأطفال والشباب.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">ما نحتاجه منكم الآن</h3>
+                    <div class="card-body">
+                        <ul>
+                            <li>نشر قصص وصور العرب في أفغانستان عبر حساباتكم في التواصل الاجتماعي.</li>
+                            <li>تواصل من جمعيات، مؤسسات، أو أفراد يرغبون في شراكات مستقبلية.</li>
+                            <li>نصائح واستشارات من خبراء تعليم، منظمات غير ربحية، وإعلاميين.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- English -->
+        <div class="lang-block" data-lang="en" style="display:none;">
+            <div class="section-label">About</div>
+            <h2 class="section-title">Who we are</h2>
+            <p class="section-subtitle">
+                Noor Al Marefat is an emerging initiative for the Arab minority in Afghanistan.
+                We combine basic humanitarian support with education and cultural preservation.
+            </p>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3 class="card-title">What we do</h3>
+                    <div class="card-body">
+                        <ul>
+                            <li>Identify vulnerable Arab families and communities in Afghanistan.</li>
+                            <li>Organise home‑delivered food support when resources are available.</li>
+                            <li>Encourage and support Arabic language and Quran education for children.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">What we seek now</h3>
+                    <div class="card-body">
+                        <ul>
+                            <li>Awareness and visibility in Arab countries and the wider Muslim world.</li>
+                            <li>Future partnerships with charities, educators and media organisations.</li>
+                            <li>Professional advice from NGO, legal and education experts.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Persian -->
+        <div class="lang-block" data-lang="fa" style="display:none; font-family: 'Vazirmatn', 'Tajawal', sans-serif;">
+            <div class="section-label">درباره بنیاد</div>
+            <h2 class="section-title">ما که هستیم؟</h2>
+            <p class="section-subtitle">
+                بنیاد نورُ المعرفة یک ابتکار مردمی برای حمایت از عرب‌های افغانستان است؛
+                ترکیبی از کمک انسانی و حفظ زبان و فرهنگ عربی.
+            </p>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3 class="card-title">کار ما چیست؟</h3>
+                    <div class="card-body">
+                        <ul>
+                            <li>شناسایی خانواده‌های عرب نیازمند در مناطق مختلف افغانستان.</li>
+                            <li>برگزاری برنامه‌های حمایتی غذایی در صورت وجود امکانات.</li>
+                            <li>تشویق و پشتیبانی از آموزش زبان عربی و قرآن برای کودکان.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">فعلاً چه می‌خواهیم؟</h3>
+                    <div class="card-body">
+                        <ul>
+                            <li>افزایش آگاهی در کشورهای عربی و منطقه.</li>
+                            <li>ارتباط با خیرین، مؤسسات و انجمن‌ها برای همکاری آینده.</li>
+                            <li> دریافت مشاوره از کارشناسان حوزه آموزش و سازمان‌های غیردولتی.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div>
-            © <span id="year"></span> نورُ المعرفة – مبادرة للعرب في أفغانستان.
+    <!-- MEDIA -->
+    <section id="media">
+        <div class="lang-block" data-lang="ar">
+            <div class="section-label">الصور والفيديو</div>
+            <h2 class="section-title">تابعونا من الميدان</h2>
+            <p class="section-subtitle">
+                ننشر صورًا ومقاطع قصيرة على إنستغرام وفيسبوك وتيك توك لتوثيق الأنشطة
+                وإيصال صوت العرب في أفغانستان.
+            </p>
         </div>
-        <div>
-            بريد التواصل: <a href="mailto:info@nooralmarefat.org" class="email-link">info@nooralmarefat.org</a>
+        <div class="lang-block" data-lang="en" style="display:none;">
+            <div class="section-label">Media</div>
+            <h2 class="section-title">Stories from the field</h2>
+            <p class="section-subtitle">
+                We share photos and short videos on our social channels to document our work
+                and highlight the realities of Arab communities in Afghanistan.
+            </p>
         </div>
-    </footer>
+        <div class="lang-block" data-lang="fa" style="display:none; font-family: 'Vazirmatn', 'Tajawal', sans-serif;">
+            <div class="section-label">رسانه</div>
+            <h2 class="section-title">تصاویر و ویدیوها</h2>
+            <p class="section-subtitle">
+                در شبکه‌های اجتماعی عکس‌ها و کلیپ‌های کوتاه از فعالیت‌ها و زندگی عرب‌های افغانستان منتشر می‌کنیم.
+            </p>
+        </div>
+
+        <div class="media-grid">
+            <article class="media-card">
+                <h3>Instagram</h3>
+                <div class="media-tag">صور يومية من الزيارات والتوزيع</div>
+                <div class="embed-placeholder">
+                    هنا يمكن وضع كود التضمين الرسمي من إنستغرام (Instagram Embed)
+                    لعرض أحدث الصور تلقائيًا.
+                </div>
+                <a href="https://instagram.com/USERNAME" target="_blank" class="media-link">
+                    زيارة حساب إنستغرام ↗
+                </a>
+            </article>
+
+            <article class="media-card">
+                <h3>Facebook</h3>
+                <div class="media-tag">تقارير أطول وتحديثات مكتوبة</div>
+                <div class="embed-placeholder">
+                    هنا يمكن وضع كود التضمين من فيسبوك (صفحة أو فيديو)
+                    ليظهر المحتوى مباشرة في الموقع.
+                </div>
+                <a href="https://facebook.com/USERNAME" target="_blank" class="media-link">
+                    زيارة صفحة فيسبوك ↗
+                </a>
+            </article>
+
+            <article class="media-card">
+                <h3>TikTok</h3>
+                <div class="media-tag">مقاطع قصيرة وقصص سريعة</div>
+                <div class="embed-placeholder">
+                    هنا كود التضمين من تيك توك (TikTok Embed)
+                    لعرض أحدث المقاطع القصيرة.
+                </div>
+                <a href="https://www.tiktok.com/@USERNAME" target="_blank" class="media-link">
+                    زيارة حساب تيك توك ↗
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="grid-2">
+            <div class="highlight-box">
+                <div class="lang-block" data-lang="ar">
+                    <p>
+                        <strong>نبحث عن الاهتمام قبل الدعم المالي.</strong><br>
+                        إذا كنت فردًا، إعلاميًا، أكاديميًا أو تمثل مؤسسة ترغب في معرفة المزيد عن العرب في أفغانستان
+                        أو التعاون مستقبلًا، يسعدنا تواصلك.
+                    </p>
+                </div>
+                <div class="lang-block" data-lang="en" style="display:none;">
+                    <p>
+                        <strong>For now, we are seeking attention, not funds.</strong><br>
+                        If you are an individual, journalist, academic or organisation interested in
+                        the Arab minority in Afghanistan or potential cooperation, we would be glad to hear from you.
+                    </p>
+                </div>
+                <div class="lang-block" data-lang="fa" style="display:none; font-family: 'Vazirmatn', 'Tajawal', sans-serif;">
+                    <p>
+                        <strong>در حال حاضر به دنبال جلب توجه و آگاهی هستیم، نه کمک مالی.</strong><br>
+                        اگر فرد، روزنامه‌نگار، پژوهشگر یا نهاد علاقه‌مند به وضعیت عرب‌های افغانستان
+                        و همکاری آینده هستید، خوشحال می‌شویم با ما در تماس باشید.
+                    </p>
+                </div>
+
+                <div class="email-pill">
+                    <span>📧</span>
+                    <a href="mailto:info@nooralmarefat.org">info@nooralmarefat.org</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">ملاحظات شفافية / Transparency note</h3>
+                <div class="card-body">
+                    <p>
+                        هذه الصفحة للتعريف والتواصل فقط. الأطر القانونية والشراكات المستقبلية
+                        يتم تطويرها بعناية، وأي تعاون سيتم بطُرق رسمية وموثّقة.
+                    </p>
+                    <p style="margin-top:0.7rem;">
+                        This website serves as an informational and contact point. Legal registration
+                        and partnerships will be communicated transparently to interested parties.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div>
+                © <span id="year"></span> Noor Al Marefat / نورُ المعرفة – All rights reserved.
+            </div>
+            <div class="footer-links">
+                <a href="mailto:info@nooralmarefat.org">info@nooralmarefat.org</a>
+                <span>·</span>
+                <a href="#top">Back to top</a>
+            </div>
+        </footer>
+    </section>
 </main>
 
 <script>
-    // Jahr im Footer automatisch setzen
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const langButtons = document.querySelectorAll('.lang-btn');
+    const langBlocks = document.querySelectorAll('.lang-block');
+    const brandSubs = document.querySelectorAll('[data-lang-block]');
+    const yearSpan = document.getElementById('year');
+
+    function setLanguage(lang) {
+        // toggle body direction
+        if (lang === 'en') {
+            document.documentElement.lang = 'en';
+            document.documentElement.dir = 'ltr';
+            document.body.classList.remove('rtl');
+            document.body.classList.add('ltr');
+        } else if (lang === 'fa') {
+            document.documentElement.lang = 'fa';
+            document.documentElement.dir = 'rtl';
+            document.body.classList.remove('ltr');
+            document.body.classList.add('rtl');
+        } else {
+            document.documentElement.lang = 'ar';
+            document.documentElement.dir = 'rtl';
+            document.body.classList.remove('ltr');
+            document.body.classList.add('rtl');
+        }
+
+        // buttons
+        langButtons.forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.setLang === lang);
+        });
+
+        // content blocks
+        langBlocks.forEach(block => {
+            block.style.display = block.dataset.lang === lang ? 'block' : 'none';
+        });
+
+        // brand + nav texts
+        brandSubs.forEach(el => {
+            el.style.display = el.dataset.langBlock === lang ? '' : 'none';
+        });
+    }
+
+    langButtons.forEach(btn => {
+        btn.addEventListener('click', () => setLanguage(btn.dataset.setLang));
+    });
+
+    // init
+    setLanguage('ar');
+    yearSpan.textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
