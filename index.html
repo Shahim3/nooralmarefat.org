@@ -5,7 +5,7 @@
     <title>Noor Al Marefat – نورُ المعرفة Foundation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-          content="Noor Al Marefat Foundation – raising awareness for the Arab minority in Afghanistan and preserving Arabic language and culture.">
+          content="Noor Al Marefat – cultural and social initiative for the Arab minority in Afghanistan.">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Vazirmatn:wght@300;400;600&display=swap"
@@ -25,16 +25,8 @@
             --text: #e5e7eb;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Tajawal', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             background:
@@ -44,21 +36,10 @@
             color: var(--text);
             min-height: 100vh;
         }
+        body.rtl { direction: rtl; text-align: right; }
+        body.ltr { direction: ltr; text-align: left; }
 
-        body.rtl {
-            direction: rtl;
-            text-align: right;
-        }
-
-        body.ltr {
-            direction: ltr;
-            text-align: left;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+        a { color: inherit; text-decoration: none; }
 
         .container {
             max-width: 1120px;
@@ -75,7 +56,6 @@
             background: linear-gradient(to left, rgba(15,23,42,0.96), rgba(15,23,42,0.9));
             border-bottom: 1px solid rgba(15,23,42,0.9);
         }
-
         .header-inner {
             max-width: 1120px;
             margin: 0 auto;
@@ -85,44 +65,23 @@
             justify-content: space-between;
             gap: 1rem;
         }
-
         .brand {
             display: flex;
             align-items: center;
             gap: 0.75rem;
         }
-
         .brand-mark {
-            width: 44px;
-            height: 44px;
-            border-radius: 999px;
+            width: 44px; height: 44px; border-radius: 999px;
             background: radial-gradient(circle at 30% 30%, #fefce8, #facc15 40%, #15803d 85%);
             border: 2px solid rgba(250, 204, 21, 0.8);
             box-shadow: 0 0 25px rgba(250, 204, 21, 0.45);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 1.4rem;
-            color: #022c22;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 1.4rem; color: #022c22;
         }
+        .brand-text-main { font-weight: 700; letter-spacing: 0.03em; }
+        .brand-text-sub { font-size: 0.78rem; color: var(--muted); }
 
-        .brand-text-main {
-            font-weight: 700;
-            letter-spacing: 0.03em;
-        }
-
-        .brand-text-sub {
-            font-size: 0.78rem;
-            color: var(--muted);
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            font-size: 0.9rem;
-        }
+        nav { display: flex; align-items: center; gap: 1.5rem; font-size: 0.9rem; }
 
         .nav-links a {
             padding: 0.4rem 0.75rem;
@@ -131,7 +90,6 @@
             color: #e5e7eb;
             transition: all 0.2s ease;
         }
-
         .nav-links a:hover {
             border-color: rgba(148, 163, 184, 0.7);
             background: rgba(15, 23, 42, 0.85);
@@ -146,7 +104,6 @@
             background: rgba(15,23,42,0.95);
             border: 1px solid rgba(51,65,85,0.9);
         }
-
         .lang-btn {
             padding: 0.25rem 0.65rem;
             border-radius: 999px;
@@ -157,7 +114,6 @@
             cursor: pointer;
             transition: all 0.18s ease;
         }
-
         .lang-btn.active {
             background: linear-gradient(to left, var(--gold), #facc15);
             color: #111827;
@@ -166,17 +122,13 @@
         }
 
         /* HERO */
-        .hero {
-            padding: 2.75rem 0 2rem;
-        }
-
+        .hero { padding: 2.75rem 0 2rem; }
         .hero-grid {
             display: grid;
             grid-template-columns: minmax(0, 1.35fr) minmax(0, 1.05fr);
             gap: 2.25rem;
             align-items: center;
         }
-
         .kicker {
             font-size: 0.9rem;
             color: var(--gold);
@@ -186,7 +138,6 @@
             align-items: center;
             margin-bottom: 0.9rem;
         }
-
         .kicker-pill {
             padding: 0.15rem 0.6rem;
             border-radius: 999px;
@@ -194,33 +145,28 @@
             background: rgba(23,37,84,0.8);
             font-size: 0.75rem;
         }
-
         .hero-title {
             font-size: clamp(2.2rem, 3.3vw, 2.8rem);
             line-height: 1.35;
             margin-bottom: 0.9rem;
         }
-
         .hero-title span.highlight {
             background: linear-gradient(to left, var(--gold), #fef08a);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
         .hero-subtitle {
             font-size: 1rem;
             color: var(--muted);
             line-height: 1.9;
             margin-bottom: 1.7rem;
         }
-
         .hero-actions {
             display: flex;
             flex-wrap: wrap;
             gap: 0.85rem;
             margin-bottom: 1.4rem;
         }
-
         .btn {
             display: inline-flex;
             align-items: center;
@@ -235,32 +181,19 @@
             transition: all 0.2s ease;
             text-decoration: none;
         }
-
         .btn-primary {
             background: linear-gradient(to left, var(--gold), #facc15);
             color: #111827;
             box-shadow: 0 14px 32px rgba(250, 204, 21, 0.4);
         }
-
-        .btn-primary:hover {
-            filter: brightness(1.04);
-            transform: translateY(-1px);
-        }
-
+        .btn-primary:hover { filter: brightness(1.04); transform: translateY(-1px); }
         .btn-secondary {
             background: rgba(15, 23, 42, 0.9);
             border-color: rgba(148, 163, 184, 0.7);
             color: #e5e7eb;
         }
-
-        .btn-secondary:hover {
-            background: rgba(30, 41, 59, 0.95);
-        }
-
-        .hero-note {
-            font-size: 0.82rem;
-            color: var(--muted);
-        }
+        .btn-secondary:hover { background: rgba(30, 41, 59, 0.95); }
+        .hero-note { font-size: 0.82rem; color: var(--muted); }
 
         /* Hero card */
         .hero-card {
@@ -270,7 +203,6 @@
             border: 1px solid rgba(55, 65, 81, 0.9);
             box-shadow: 0 22px 60px rgba(15, 23, 42, 0.9);
         }
-
         .hero-card-badge {
             display: inline-flex;
             align-items: center;
@@ -283,19 +215,8 @@
             color: #bbf7d0;
             margin-bottom: 0.9rem;
         }
-
-        .hero-card-main {
-            font-size: 0.95rem;
-            margin-bottom: 1.1rem;
-        }
-
-        .stat-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-            margin-bottom: 1rem;
-        }
-
+        .hero-card-main { font-size: 0.95rem; margin-bottom: 1.1rem; }
+        .stat-row { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 1rem; }
         .stat-card {
             flex: 1 1 120px;
             background: rgba(15,23,42,0.95);
@@ -303,40 +224,14 @@
             padding: 0.8rem 0.9rem;
             border: 1px solid rgba(55,65,81,0.95);
         }
-
-        .stat-number {
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: var(--gold);
-            margin-bottom: 0.15rem;
-        }
-
-        .stat-label {
-            font-size: 0.8rem;
-            color: var(--muted);
-        }
-
-        .trust-text {
-            font-size: 0.82rem;
-            color: var(--muted);
-        }
+        .stat-number { font-size: 1.05rem; font-weight: 700; color: var(--gold); margin-bottom: 0.15rem; }
+        .stat-label { font-size: 0.8rem; color: var(--muted); }
+        .trust-text { font-size: 0.82rem; color: var(--muted); }
 
         /* Sections */
-        section {
-            margin-top: 2.9rem;
-        }
-
-        .section-label {
-            font-size: 0.82rem;
-            color: var(--gold);
-            margin-bottom: 0.35rem;
-        }
-
-        .section-title {
-            font-size: 1.4rem;
-            margin-bottom: 0.35rem;
-        }
-
+        section { margin-top: 2.9rem; }
+        .section-label { font-size: 0.82rem; color: var(--gold); margin-bottom: 0.35rem; }
+        .section-title { font-size: 1.4rem; margin-bottom: 0.35rem; }
         .section-subtitle {
             font-size: 0.95rem;
             color: var(--muted);
@@ -349,48 +244,22 @@
             grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.05fr);
             gap: 1.8rem;
         }
-
         .card {
             background: rgba(15,23,42,0.95);
             border-radius: 1.25rem;
             padding: 1.5rem 1.5rem;
             border: 1px solid rgba(55,65,81,0.96);
         }
+        .card-title { font-size: 1.02rem; margin-bottom: 0.6rem; }
+        .card-body { font-size: 0.93rem; line-height: 1.8; color: #e5e7eb; }
 
-        .card-title {
-            font-size: 1.02rem;
-            margin-bottom: 0.6rem;
-        }
-
-        .card-body {
-            font-size: 0.93rem;
-            line-height: 1.8;
-            color: #e5e7eb;
-        }
-
-        ul {
-            list-style: none;
-            margin-top: 0.5rem;
-        }
-
-        ul li {
-            margin-bottom: 0.35rem;
-            position: relative;
-            padding-inline-start: 0.9rem;
-        }
-
+        ul { list-style: none; margin-top: 0.5rem; }
+        ul li { margin-bottom: 0.35rem; position: relative; padding-inline-start: 0.9rem; }
         body.rtl ul li::before {
-            content: "•";
-            position: absolute;
-            right: 0;
-            color: var(--gold);
+            content: "•"; position: absolute; right: 0; color: var(--gold);
         }
-
         body.ltr ul li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: var(--gold);
+            content: "•"; position: absolute; left: 0; color: var(--gold);
         }
 
         /* Media */
@@ -399,7 +268,6 @@
             grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 1.4rem;
         }
-
         .media-card {
             background: radial-gradient(circle at top, rgba(30,64,175,0.45), rgba(15,23,42,0.98));
             border-radius: 1.2rem;
@@ -409,12 +277,7 @@
             flex-direction: column;
             gap: 0.75rem;
         }
-
-        .media-tag {
-            font-size: 0.78rem;
-            color: var(--muted);
-        }
-
+        .media-tag { font-size: 0.78rem; color: var(--muted); }
         .embed-placeholder {
             flex: 1;
             border-radius: 0.9rem;
@@ -428,7 +291,6 @@
             font-size: 0.8rem;
             color: #cbd5f5;
         }
-
         .media-link {
             font-size: 0.8rem;
             color: #bfdbfe;
@@ -444,7 +306,6 @@
             padding: 1.4rem 1.5rem;
             border: 1px solid rgba(250,204,21,0.8);
         }
-
         .email-pill {
             display: inline-flex;
             align-items: center;
@@ -468,51 +329,21 @@
             gap: 0.75rem;
             justify-content: space-between;
         }
-
-        .footer-links {
-            display: flex;
-            gap: 0.75rem;
-        }
-
-        .footer-links a {
-            color: #cbd5f5;
-        }
+        .footer-links { display: flex; gap: 0.75rem; }
+        .footer-links a { color: #cbd5f5; }
 
         /* Responsive */
         @media (max-width: 900px) {
-            .hero-grid {
-                grid-template-columns: minmax(0, 1fr);
-            }
-
-            .hero-card {
-                order: -1;
-            }
-
-            nav {
-                gap: 0.9rem;
-            }
+            .hero-grid { grid-template-columns: minmax(0, 1fr); }
+            .hero-card { order: -1; }
+            nav { gap: 0.9rem; }
         }
-
         @media (max-width: 768px) {
-            .container {
-                padding-inline: 1rem;
-            }
-
-            .grid-2 {
-                grid-template-columns: minmax(0, 1fr);
-            }
-
-            .media-grid {
-                grid-template-columns: minmax(0, 1fr);
-            }
-
-            .header-inner {
-                padding-inline: 1rem;
-            }
-
-            .nav-links {
-                display: none;
-            }
+            .container { padding-inline: 1rem; }
+            .grid-2 { grid-template-columns: minmax(0, 1fr); }
+            .media-grid { grid-template-columns: minmax(0, 1fr); }
+            .header-inner { padding-inline: 1rem; }
+            .nav-links { display: none; }
         }
     </style>
 </head>
@@ -524,23 +355,26 @@
             <div class="brand-mark">ن</div>
             <div>
                 <div class="brand-text-main">نورُ المعرفة</div>
-                <div class="brand-text-sub" data-lang-block="ar">مبادرة للعرب في أفغانستان</div>
-                <div class="brand-text-sub" data-lang-block="en" style="display:none;">Initiative for Arabs in Afghanistan</div>
-                <div class="brand-text-sub" data-lang-block="fa" style="display:none;">ابتکار برای عرب‌های افغانستان</div>
+                <div class="brand-text-sub" data-lang-block="ar">ابتکار فرهنگی–اجتماعی برای عرب‌های افغانستان</div>
+                <div class="brand-text-sub" data-lang-block="en" style="display:none;">Cultural & social initiative for Arabs in Afghanistan</div>
+                <div class="brand-text-sub" data-lang-block="fa" style="display:none;">ابتکار فرهنگی–اجتماعی برای اعراب افغانستان</div>
             </div>
         </div>
 
         <nav>
             <div class="nav-links">
-                <a href="#about" data-lang-block="ar">من نحن</a>
-                <a href="#media" data-lang-block="ar">الصور والفيديو</a>
-                <a href="#contact" data-lang-block="ar">تواصل</a>
+                <a href="#about" data-lang-block="ar">پروژه</a>
+                <a href="#goals" data-lang-block="ar">اهداف</a>
+                <a href="#media" data-lang-block="ar">رسانه</a>
+                <a href="#contact" data-lang-block="ar">ارتباط</a>
 
-                <a href="#about" data-lang-block="en" style="display:none;">About</a>
+                <a href="#about" data-lang-block="en" style="display:none;">Project</a>
+                <a href="#goals" data-lang-block="en" style="display:none;">Objectives</a>
                 <a href="#media" data-lang-block="en" style="display:none;">Media</a>
                 <a href="#contact" data-lang-block="en" style="display:none;">Contact</a>
 
-                <a href="#about" data-lang-block="fa" style="display:none;">درباره ما</a>
+                <a href="#about" data-lang-block="fa" style="display:none;">طرح</a>
+                <a href="#goals" data-lang-block="fa" style="display:none;">اهداف</a>
                 <a href="#media" data-lang-block="fa" style="display:none;">رسانه</a>
                 <a href="#contact" data-lang-block="fa" style="display:none;">ارتباط</a>
             </div>
@@ -562,55 +396,59 @@
                 <!-- AR HERO -->
                 <div class="lang-block" data-lang="ar">
                     <div class="kicker">
-                        <span class="kicker-pill">نحتاج انتباهكم من العالم العربي</span>
-                        <span>يا جماعة الخير في السعودية والخليج</span>
+                        <span class="kicker-pill">طرح ابتکار فرهنگی–اجتماعی</span>
+                        <span>«نورُ المعرفة» للعرب في أفغانستان</span>
                     </div>
                     <h1 class="hero-title">
                         <span class="highlight">نورُ المعرفة</span><br>
-                        صوت العرب في أفغانستان<br>
-                        لإحياء لغتنا وثقافتنا
+                        لإحياء الهوية الأصيلة<br>
+                        للأقوام العربية في أفغانستان
                     </h1>
                     <p class="hero-subtitle">
-                        نخدم العوائل العربية المحتاجة في أفغانستان بإيصال الغذاء للبيوت،
-                        ونعمل على تعليم اللغة العربية وثقافتنا الأصيلة للجيل الجديد.
-                        حاليًا لا نستقبل تبرعات، بل نبحث عن <strong>الوعي والدعم المعنوي</strong> من العالم العربي.
+                        مشروع ثقافي، اجتماعي وتعليمي يهدف إلى التعريف، تقوية وإحياء هوية العرب في أفغانستان
+                        عبر منصة علمية، ثقافية وإعلامية تُبرز قدراتهم وتحدياتهم للعالم العربي والمجتمع الدولي.
+                        في هذه المرحلة نركّز على <strong>الوعي وبناء الشراكات</strong>، لا على جمع التبرعات المباشرة.
                     </p>
                 </div>
 
                 <!-- EN HERO -->
                 <div class="lang-block" data-lang="en" style="display:none;">
                     <div class="kicker">
-                        <span class="kicker-pill">Raising awareness across the Arab world</span>
-                        <span>For the Arab minority in Afghanistan</span>
+                        <span class="kicker-pill">Cultural & social initiative</span>
+                        <span>“Noor Al Marefat” for Arabs in Afghanistan</span>
                     </div>
                     <h1 class="hero-title">
                         <span class="highlight">Noor Al Marefat</span><br>
-                        A voice for Arabs in Afghanistan<br>
-                        preserving language and identity
+                        Reviving the authentic identity<br>
+                        of the Arab communities in Afghanistan
                     </h1>
                     <p class="hero-subtitle">
-                        We support vulnerable Arab families in Afghanistan with home‑delivered food
-                        and work to revive Arabic language and culture among the younger generation.
-                        At this stage we are <strong>not collecting donations</strong> – our priority is
-                        awareness, visibility and future partnerships.
+                        A cultural, social and educational initiative designed to introduce, strengthen and revive
+                        the identity of the Arab minority in Afghanistan. It builds an academic, cultural and media
+                        platform to present their capacities, achievements and challenges to the Arab world and
+                        the international community. At this stage, our focus is on
+                        <strong>awareness and partnerships</strong>, not on direct fundraising.
                     </p>
                 </div>
 
                 <!-- FA HERO -->
-                <div class="lang-block" data-lang="fa" style="display:none;">
+                <div class="lang-block" data-lang="fa" style="display:none; font-family: 'Vazirmatn','Tajawal',sans-serif;">
                     <div class="kicker">
-                        <span class="kicker-pill">نیاز به توجه جهان عرب و منطقه</span>
-                        <span>برای عرب‌های افغانستان</span>
+                        <span class="kicker-pill">طرح ابتکار فرهنگی–اجتماعی</span>
+                        <span>«نورُ المعرفة» برای اعراب افغانستان</span>
                     </div>
                     <h1 class="hero-title">
-                        <span class="highlight">بنیاد نورُ المعرفة</span><br>
-                        صدای عرب‌های افغانستان<br>
-                        برای حفظ زبان و هویت
+                        <span class="highlight">نورُ المعرفة</span><br>
+                        برای معرفی و احیای هویت اصیل<br>
+                        اقوام عرب در افغانستان
                     </h1>
                     <p class="hero-subtitle">
-                        ما به خانواده‌های عرب نیازمند در افغانستان با رساندن مواد غذایی به خانه‌ها کمک می‌کنیم
-                        و برای آموزش زبان عربی و فرهنگ اصیل به نسل جوان تلاش می‌کنیم.
-                        در حال حاضر <strong>کمک مالی جمع‌آوری نمی‌کنیم</strong> و تمرکز ما بر آگاهی و ارتباط است.
+                        پروژه «نورُ المعرفة» یک ابتکار فرهنگی، اجتماعی و آموزشی است
+                        با هدف معرفی، تقویت و احیای هویت اصیل اقوام عرب در افغانستان.
+                        این ابتکار می‌کوشد از طریق ایجاد بستر علمی، فرهنگی و رسانه‌ای،
+                        ظرفیت‌ها، دستاوردها و چالش‌های جامعه عرب افغانستان را به‌صورت منظم
+                        و مستند به جهان عرب و جامعه بین‌المللی معرفی کند.
+                        در این مرحله تمرکز ما بر <strong>آگاهی و جلب همکاری</strong> است، نه جمع‌آوری کمک مالی.
                     </p>
                 </div>
 
@@ -618,139 +456,299 @@
                     <a href="mailto:info@nooralmarefat.org" class="btn btn-primary">
                         📧 info@nooralmarefat.org
                     </a>
-                    <a href="#media" class="btn btn-secondary">
-                        👁️ عرض الصور / View media
+                    <a href="#goals" class="btn btn-secondary">
+                        📜 اهداف پروژه
                     </a>
                 </div>
                 <p class="hero-note">
-                    شارك هذه الصفحة مع من تعرف في السعودية، الخليج، وأوروبا – كل مشاركة تعطي صوتًا للعرب في أفغانستان.
+                    لطفاً این صفحه را با دوستان و نهادهای آگاه در کشورهای عربی و منطقه به اشتراک بگذارید.
                 </p>
             </div>
 
             <aside class="hero-card">
                 <div class="hero-card-badge">
                     <span>🔎</span>
-                    <span>مبادرة توثيق ووعي، لا جمع تبرعات حاليًا</span>
+                    <span>حرکت فرهنگی مستند، نه جمع‌آوری فوری اعانه</span>
                 </div>
                 <p class="hero-card-main">
-                    يوجد ما يُقدر بـ<strong>١٠ ملايين عربي</strong> في أفغانستان.
-                    نعمل على إبقاء لغتهم وثقافتهم حيّة من خلال الغذاء، التعليم، والرواية الصادقة لقصصهم.
+                    تخمین می‌شود حدود <strong>ده میلیون عرب</strong> در افغانستان زندگی کنند.
+                    «نورُ المعرفة» تلاش می‌کند روایت منظم، شرافتمندانه و علمی از این جامعه ارائه دهد
+                    و پایه‌ای برای برنامه‌های آموزشی و اجتماعی آینده بگذارد.
                 </p>
                 <div class="stat-row">
                     <div class="stat-card">
                         <div class="stat-number">١٠ مليون</div>
-                        <div class="stat-label">عربي تقريبًا في أفغانستان</div>
+                        <div class="stat-label">عرب تقریبی در افغانستان</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">غذاء ومعرفة</div>
-                        <div class="stat-label">دعم مادي وثقافي معًا</div>
+                        <div class="stat-number">فرهنگ و علم</div>
+                        <div class="stat-label">تمرکز بر هویت، زبان و آموزش</div>
                     </div>
                 </div>
                 <p class="trust-text">
-                    هذه صفحة تعريفية ووسيلة تواصل فقط. لأي استفسار رسمي أو للتعاون، يرجى مراسلتنا على
-                    <strong>info@nooralmarefat.org</strong>.
+                    این وب‌سایت صرفاً برای معرفی طرح و ایجاد ارتباط است.
+                    هرگونه حمایت رسمی در آینده به‌صورت شفاف و مستند اعلام خواهد شد.
                 </p>
             </aside>
         </div>
     </section>
 
-    <!-- ABOUT / MISSION -->
+    <!-- PROJECT DESCRIPTION (from your Persian text) -->
     <section id="about">
-        <!-- Arabic -->
+        <!-- ARABIC VERSION -->
         <div class="lang-block" data-lang="ar">
-            <div class="section-label">من نحن</div>
-            <h2 class="section-title">مبادرة نورُ المعرفة للعرب في أفغانستان</h2>
+            <div class="section-label">مقدمه المشروع</div>
+            <h2 class="section-title">طرح ابتکار فرهنگی–اجتماعی «نورُ المعرفة»</h2>
             <p class="section-subtitle">
-                مبادرة أهلية تسعى لدعم العرب في أفغانستان إنسانيًا وثقافيًا. نؤمن أن الغذاء يحفظ الكرامة اليوم،
-                وأن اللغة والمعرفة تحفظ الهوية غدًا.
+                صُمِّم مشروع «نورُ المعرفة» كابتكار ثقافي، اجتماعي وتعليمي يهدف إلى
+                التعريف، تقوية وإحياء الهوية الأصيلة للأقوام العربية في أفغانستان.
+                يسعى هذا المشروع إلى إنشاء منصة علمية، ثقافية وإعلامية تُعرّف بشكل
+                منظم ومُوثَّق بطاقات، إنجازات وتحديات المجتمع العربي في أفغانستان
+                أمام العالم العربي والمجتمع الدولي.
             </p>
-
-            <div class="grid-2">
-                <div class="card">
-                    <h3 class="card-title">ماذا نفعل ميدانيًا؟</h3>
-                    <div class="card-body">
-                        <ul>
-                            <li>الوصول إلى العوائل العربية الأشد احتياجًا في مناطق مختلفة من أفغانستان.</li>
-                            <li>تنظيم حملات لتجهيز السلال الغذائية وإيصالها للبيوت.</li>
-                            <li>دعم مبادرات تعليم اللغة العربية والقرآن للأطفال والشباب.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3 class="card-title">ما نحتاجه منكم الآن</h3>
-                    <div class="card-body">
-                        <ul>
-                            <li>نشر قصص وصور العرب في أفغانستان عبر حساباتكم في التواصل الاجتماعي.</li>
-                            <li>تواصل من جمعيات، مؤسسات، أو أفراد يرغبون في شراكات مستقبلية.</li>
-                            <li>نصائح واستشارات من خبراء تعليم، منظمات غير ربحية، وإعلاميين.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <p class="section-subtitle">
+                يتشكل هذا المشروع في إطار عمل مؤسسة خيرية وشبكات إعلامية واجتماعية،
+                ويطمح إلى جذب اهتمام القادة الواعين، والمؤسسات الثقافية، والشخصيات
+                المؤثرة في العالم العربي من أجل فتح آفاق الدعم والتعاون لتطوير
+                الأوضاع العلمية، الثقافية والاجتماعية لهذه المجتمعات.
+            </p>
         </div>
 
-        <!-- English -->
+        <!-- ENGLISH VERSION -->
         <div class="lang-block" data-lang="en" style="display:none;">
-            <div class="section-label">About</div>
-            <h2 class="section-title">Who we are</h2>
+            <div class="section-label">Introduction</div>
+            <h2 class="section-title">“Noor Al Marefat” – A Cultural & Social Initiative</h2>
             <p class="section-subtitle">
-                Noor Al Marefat is an emerging initiative for the Arab minority in Afghanistan.
-                We combine basic humanitarian support with education and cultural preservation.
+                The “Noor Al Marefat” project is a cultural, social and educational initiative
+                designed to introduce, strengthen and revive the authentic identity of the Arab
+                communities in Afghanistan. It aims to build an academic, cultural and media
+                platform that presents the capacities, achievements and challenges of this
+                community in a structured and documented way to the Arab world and the
+                international community.
             </p>
+            <p class="section-subtitle">
+                The initiative operates within the framework of a charitable foundation and
+                through media and social networks. It seeks to attract the attention of
+                thoughtful leaders, cultural institutions and influential figures across
+                the Arab world in order to create opportunities for scientific, cultural
+                and social development for Arabs in Afghanistan.
+            </p>
+        </div>
 
-            <div class="grid-2">
-                <div class="card">
-                    <h3 class="card-title">What we do</h3>
-                    <div class="card-body">
-                        <ul>
-                            <li>Identify vulnerable Arab families and communities in Afghanistan.</li>
-                            <li>Organise home‑delivered food support when resources are available.</li>
-                            <li>Encourage and support Arabic language and Quran education for children.</li>
-                        </ul>
-                    </div>
+        <!-- PERSIAN VERSION -->
+        <div class="lang-block" data-lang="fa" style="display:none; font-family:'Vazirmatn','Tajawal',sans-serif;">
+            <div class="section-label">مقدمه</div>
+            <h2 class="section-title">طرح ابتکار فرهنگی–اجتماعی «نورُ المعرفة»</h2>
+            <p class="section-subtitle">
+                پروژه «نورُ المعرفة» به عنوان یک ابتکار فرهنگی، اجتماعی و آموزشی با هدف
+                معرفی، تقویت و احیای هویت اصیل اقوام عرب در افغانستان طراحی گردیده است.
+                این ابتکار تلاش دارد تا از طریق ایجاد یک بستر علمی، فرهنگی و رسانه‌ای،
+                ظرفیت‌ها، دستاوردها و چالش‌های جامعه عرب افغانستان را به صورت منظم و
+                مستند به جهان عرب و جامعه بین‌المللی معرفی نماید.
+            </p>
+            <p class="section-subtitle">
+                این طرح در چارچوب فعالیت‌های یک بنیاد خیریه و شبکه‌های رسانه‌ای و اجتماعی
+                شکل گرفته و می‌کوشد با جلب توجه رهبران آگاه، نهادهای فرهنگی و شخصیت‌های
+                اثرگذار جهان عرب، زمینه حمایت و همکاری برای توسعه علمی، فرهنگی و اجتماعی
+                این جامعه را فراهم سازد.
+            </p>
+        </div>
+    </section>
+
+    <!-- GOALS SECTION -->
+    <section id="goals">
+        <!-- AR -->
+        <div class="lang-block" data-lang="ar">
+            <div class="section-label">الأهداف الأساسية للمشروع</div>
+            <h2 class="section-title">محاور «نورُ المعرفة» الستة</h2>
+
+            <div class="card" style="margin-bottom:1rem;">
+                <h3 class="card-title">١. إنشاء مركز ثقافي–علمي شامل</h3>
+                <div class="card-body">
+                    يهدف المشروع إلى تأسيس مركز موحّد وشامل في أفغانستان يعمل كقاعدة
+                    للتعريف ودعم القدرات العلمية، الثقافية والاجتماعية للأقوام العربية،
+                    وينسّق البرامج والأنشطة التعليمية والثقافية بشكل منظّم.
                 </div>
-                <div class="card">
-                    <h3 class="card-title">What we seek now</h3>
-                    <div class="card-body">
-                        <ul>
-                            <li>Awareness and visibility in Arab countries and the wider Muslim world.</li>
-                            <li>Future partnerships with charities, educators and media organisations.</li>
-                            <li>Professional advice from NGO, legal and education experts.</li>
-                        </ul>
-                    </div>
+            </div>
+
+            <div class="card" style="margin-bottom:1rem;">
+                <h3 class="card-title">٢. توثيق وتعريف الشخصيات والرصيد العلمي</h3>
+                <div class="card-body">
+                    سيعمل المشروع على رصد، توثيق وتعريف العلماء، حفظة القرآن الكريم،
+                    الشعراء، المفكرين، الباحثين وسائر الشخصيات المؤثرة من العرب في
+                    أفغانستان؛ لإبراز مكانتهم العلمية والثقافية على المستويين الوطني
+                    والدولي.
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom:1rem;">
+                <h3 class="card-title">٣. تقوية الهوية الثقافية واللغة العربية</h3>
+                <div class="card-body">
+                    إدراكًا لأهمية اللغة في حفظ الهوية، يركّز المشروع على إحياء اللغة
+                    والثقافة العربية الأصيلة بين الأقوام العربية في أفغانستان، عبر برامج
+                    لتعليم العربية للجيل الناشئ وحتى الكبار الذين ضعف ارتباطهم بلغتهم
+                    الأم مع مرور الزمن.
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom:1rem;">
+                <h3 class="card-title">٤. الدعم الاجتماعي والاقتصادي للأسر المحتاجة</h3>
+                <div class="card-body">
+                    يسعى المشروع، بالتعاون مع المحسنين والمؤسسات الخيرية، إلى تحسين
+                    الأوضاع المعيشية للأسر الفقيرة ضمن المجتمع العربي في أفغانستان،
+                    من خلال برامج تمكين اقتصادي، مساعدات معيشية، وفتح فرص تعليم وتدريب
+                    مهني متى ما توفّرت الإمكانات.
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom:1rem;">
+                <h3 class="card-title">٥. رعاية الأيتام وتوسعة التعليم</h3>
+                <div class="card-body">
+                    من أولويات المبادرة الاهتمام بالأيتام من أبناء العرب، وتوفير بيئة
+                    تعليمية مناسبة لهم. وسيُسعى – بالتنسيق مع الجهات الخيرية – إلى
+                    إنشاء أو دعم المدارس والمؤسسات التعليمية في المناطق العربية
+                    داخل أفغانستان.
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">٦. بناء جسور بين عرب أفغانستان والعالم العربي</h3>
+                <div class="card-body">
+                    يهدف المشروع استراتيجيًا إلى تقوية الروابط والتضامن بين عرب
+                    أفغانستان والعالم العربي، بما يفتح المجال للتبادل العلمي، الثقافي
+                    والاجتماعي، ويزيد من مستوى الاهتمام والدعم الإقليمي والدولي لهذا
+                    المجتمع.
                 </div>
             </div>
         </div>
 
-        <!-- Persian -->
-        <div class="lang-block" data-lang="fa" style="display:none; font-family: 'Vazirmatn', 'Tajawal', sans-serif;">
-            <div class="section-label">درباره بنیاد</div>
-            <h2 class="section-title">ما که هستیم؟</h2>
-            <p class="section-subtitle">
-                بنیاد نورُ المعرفة یک ابتکار مردمی برای حمایت از عرب‌های افغانستان است؛
-                ترکیبی از کمک انسانی و حفظ زبان و فرهنگ عربی.
-            </p>
+        <!-- EN -->
+        <div class="lang-block" data-lang="en" style="display:none;">
+            <div class="section-label">Core objectives</div>
+            <h2 class="section-title">Six pillars of the initiative</h2>
 
-            <div class="grid-2">
-                <div class="card">
-                    <h3 class="card-title">کار ما چیست؟</h3>
-                    <div class="card-body">
-                        <ul>
-                            <li>شناسایی خانواده‌های عرب نیازمند در مناطق مختلف افغانستان.</li>
-                            <li>برگزاری برنامه‌های حمایتی غذایی در صورت وجود امکانات.</li>
-                            <li>تشویق و پشتیبانی از آموزش زبان عربی و قرآن برای کودکان.</li>
-                        </ul>
-                    </div>
+            <div class="card" style="margin-bottom:1rem;">
+                <h3 class="card-title">1. Establishing a comprehensive cultural & academic centre</h3>
+                <div class="card-body">
+                    Creating a unified cultural and scientific centre in Afghanistan that
+                    becomes the main hub for presenting and supporting the academic, cultural
+                    and social capacities of Arab communities and for coordinating related
+                    programmes.
                 </div>
-                <div class="card">
-                    <h3 class="card-title">فعلاً چه می‌خواهیم؟</h3>
-                    <div class="card-body">
-                        <ul>
-                            <li>افزایش آگاهی در کشورهای عربی و منطقه.</li>
-                            <li>ارتباط با خیرین، مؤسسات و انجمن‌ها برای همکاری آینده.</li>
-                            <li> دریافت مشاوره از کارشناسان حوزه آموزش و سازمان‌های غیردولتی.</li>
-                        </ul>
-                    </div>
+            </div>
+
+            <div class="card" style="margin-bottom:1rem;">
+                <h3 class="card-title">2. Highlighting scholars and intellectual capital</h3>
+                <div class="card-body">
+                    Identifying, documenting and presenting scholars, Qur’an memorizers,
+                    poets, thinkers, researchers and influential Arab figures in Afghanistan
+                    so that their role and contribution are recognised on national and
+                    international levels.
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom:1rem;">
+                <h3 class="card-title">3. Strengthening cultural identity and the Arabic language</h3>
+                <div class="card-body">
+                    Reviving authentic Arabic language and culture among Arabs in Afghanistan
+                    through programmes that teach Arabic to the younger generation and to
+                    elders whose connection to their mother tongue has weakened over time.
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom:1rem;">
+                <h3 class="card-title">4. Social and economic support for vulnerable families</h3>
+                <div class="card-body">
+                    In cooperation with donors and charitable organisations, the project aims
+                    to improve the living conditions of low‑income Arab families through
+                    economic empowerment initiatives, basic livelihood assistance and
+                    access to educational and professional opportunities whenever resources
+                    allow.
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom:1rem;">
+                <h3 class="card-title">5. Supporting orphans and expanding education</h3>
+                <div class="card-body">
+                    Giving priority to Arab orphans and ensuring they have proper educational
+                    opportunities by initiating or strengthening schools and learning centres
+                    in Arab‑inhabited areas of Afghanistan in partnership with charities.
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">6. Building links with the wider Arab world</h3>
+                <div class="card-body">
+                    Strengthening ties and solidarity between Arabs in Afghanistan and the
+                    wider Arab world, enabling scientific, cultural and social exchange and
+                    encouraging long‑term attention and support at regional and international
+                    level.
+                </div>
+            </div>
+        </div>
+
+        <!-- FA -->
+        <div class="lang-block" data-lang="fa" style="display:none; font-family:'Vazirmatn','Tajawal',sans-serif;">
+            <div class="section-label">اهداف اساسی پروژه</div>
+            <h2 class="section-title">شش محور اصلی «نورُ المعرفة»</h2>
+
+            <div class="card" style="margin-bottom:1rem;">
+                <h3 class="card-title">۱. ایجاد مرکز جامع فرهنگی و علمی</h3>
+                <div class="card-body">
+                    یکی از اهداف بنیادی این ابتکار، تأسیس یک مرکز واحد و جامع فرهنگی–علمی
+                    در افغانستان است که به عنوان پایگاهی برای معرفی و حمایت از ظرفیت‌های
+                    علمی، فرهنگی و اجتماعی اقوام عرب فعالیت نماید و فعالیت‌های آموزشی و
+                    فرهنگی را سازمان‌دهی کند.
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom:1rem;">
+                <h3 class="card-title">۲. معرفی شخصیت‌ها و سرمایه‌های علمی جامعه عرب</h3>
+                <div class="card-body">
+                    در چارچوب این پروژه تلاش خواهد شد تا علما، حافظان قرآن کریم، شعرا،
+                    اندیشمندان، پژوهشگران و شخصیت‌های تأثیرگذار عرب در افغانستان شناسایی،
+                    مستندسازی و معرفی شوند تا جایگاه علمی و فرهنگی آنان در سطح ملی و
+                    بین‌المللی برجسته گردد.
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom:1rem;">
+                <h3 class="card-title">۳. تقویت هویت فرهنگی و زبان عربی</h3>
+                <div class="card-body">
+                    با توجه به اهمیت زبان در حفظ هویت فرهنگی، یکی از محورهای اساسی این طرح
+                    احیای زبان و فرهنگ اصیل عربی در میان اقوام عرب افغانستان است. در همین
+                    راستا برنامه‌هایی برای آموزش زبان عربی به نسل جوان و حتی سالمندانی که
+                    به مرور زمان ارتباط آنان با زبان مادری خود کمرنگ شده است طراحی خواهد شد.
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom:1rem;">
+                <h3 class="card-title">۴. حمایت اجتماعی و اقتصادی از خانواده‌های نیازمند</h3>
+                <div class="card-body">
+                    این ابتکار در نظر دارد با همکاری خیرین و نهادهای خیریه، برای بهبود
+                    وضعیت معیشتی خانواده‌های کم‌بضاعت در میان اقوام عرب افغانستان گام‌های
+                    مؤثر بردارد. این حمایت‌ها می‌تواند شامل برنامه‌های توانمندسازی اقتصادی،
+                    کمک‌های معیشتی و ایجاد فرصت‌های آموزشی و حرفه‌ای باشد.
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom:1rem;">
+                <h3 class="card-title">۵. حمایت از ایتام و توسعه آموزش</h3>
+                <div class="card-body">
+                    یکی از اولویت‌های مهم این طرح، حمایت از کودکان یتیم در میان اقوام عرب
+                    و فراهم ساختن فرصت‌های آموزشی مناسب برای آنان است. در همین راستا تلاش
+                    خواهد شد با جلب حمایت نهادهای خیریه، مکاتب و مدارس آموزشی در مناطق
+                    عرب‌نشین افغانستان ایجاد یا تقویت گردد.
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">۶. ایجاد پیوند میان عرب‌های افغانستان و جهان عرب</h3>
+                <div class="card-body">
+                    از اهداف راهبردی این ابتکار، تقویت ارتباط و همبستگی میان عرب‌های
+                    افغانستان و جهان عرب است. این پیوند می‌تواند زمینه تبادل علمی، فرهنگی
+                    و اجتماعی را فراهم کرده و باعث افزایش توجه و حمایت از این جامعه در سطح
+                    منطقه‌ای و بین‌المللی گردد.
                 </div>
             </div>
         </div>
@@ -759,63 +757,61 @@
     <!-- MEDIA -->
     <section id="media">
         <div class="lang-block" data-lang="ar">
-            <div class="section-label">الصور والفيديو</div>
-            <h2 class="section-title">تابعونا من الميدان</h2>
+            <div class="section-label">رسانه و شبکه‌های اجتماعی</div>
+            <h2 class="section-title">تصاویر و ویدیوها از میـدان</h2>
             <p class="section-subtitle">
-                ننشر صورًا ومقاطع قصيرة على إنستغرام وفيسبوك وتيك توك لتوثيق الأنشطة
-                وإيصال صوت العرب في أفغانستان.
+                از طریق اینستاگرام، فیسبوک و تیک‌تاک، فعالیت‌ها، گفتگوها و روایت‌های
+                جامعه عرب در افغانستان را به‌صورت تصویری با جهان به اشتراک می‌گذاریم.
             </p>
         </div>
         <div class="lang-block" data-lang="en" style="display:none;">
             <div class="section-label">Media</div>
-            <h2 class="section-title">Stories from the field</h2>
+            <h2 class="section-title">Visual stories & updates</h2>
             <p class="section-subtitle">
-                We share photos and short videos on our social channels to document our work
-                and highlight the realities of Arab communities in Afghanistan.
+                Through Instagram, Facebook and TikTok we share visual stories, field visits
+                and educational activities related to Arabs in Afghanistan.
             </p>
         </div>
-        <div class="lang-block" data-lang="fa" style="display:none; font-family: 'Vazirmatn', 'Tajawal', sans-serif;">
-            <div class="section-label">رسانه</div>
-            <h2 class="section-title">تصاویر و ویدیوها</h2>
+        <div class="lang-block" data-lang="fa" style="display:none; font-family:'Vazirmatn','Tajawal',sans-serif;">
+            <div class="section-label">رسانه و شبکه‌های اجتماعی</div>
+            <h2 class="section-title">داستان‌ها و گزارش‌های تصویری</h2>
             <p class="section-subtitle">
-                در شبکه‌های اجتماعی عکس‌ها و کلیپ‌های کوتاه از فعالیت‌ها و زندگی عرب‌های افغانستان منتشر می‌کنیم.
+                با استفاده از اینستاگرام، فیسبوک و تیک‌تاک، تصاویر و ویدیوهای مستند از
+                زندگی و فعالیت‌های اعراب افغانستان را منتشر می‌کنیم تا صدای آن‌ها شنیده شود.
             </p>
         </div>
 
         <div class="media-grid">
             <article class="media-card">
                 <h3>Instagram</h3>
-                <div class="media-tag">صور يومية من الزيارات والتوزيع</div>
+                <div class="media-tag">گزارش‌های تصویری کوتاه</div>
                 <div class="embed-placeholder">
-                    هنا يمكن وضع كود التضمين الرسمي من إنستغرام (Instagram Embed)
-                    لعرض أحدث الصور تلقائيًا.
+                    اینجا می‌توانید کد Embed رسمی اینستاگرام را قرار دهید تا آخرین پست‌ها نمایش داده شود.
                 </div>
                 <a href="https://instagram.com/USERNAME" target="_blank" class="media-link">
-                    زيارة حساب إنستغرام ↗
+                    Instagram ↗
                 </a>
             </article>
 
             <article class="media-card">
                 <h3>Facebook</h3>
-                <div class="media-tag">تقارير أطول وتحديثات مكتوبة</div>
+                <div class="media-tag">گزارش‌های متنی و ویدیویی طولانی‌تر</div>
                 <div class="embed-placeholder">
-                    هنا يمكن وضع كود التضمين من فيسبوك (صفحة أو فيديو)
-                    ليظهر المحتوى مباشرة في الموقع.
+                    این بخش برای کد Embed صفحه یا ویدیوهای فیسبوک در نظر گرفته شده است.
                 </div>
                 <a href="https://facebook.com/USERNAME" target="_blank" class="media-link">
-                    زيارة صفحة فيسبوك ↗
+                    Facebook ↗
                 </a>
             </article>
 
             <article class="media-card">
                 <h3>TikTok</h3>
-                <div class="media-tag">مقاطع قصيرة وقصص سريعة</div>
+                <div class="media-tag">کلیپ‌های کوتاه از میـدان</div>
                 <div class="embed-placeholder">
-                    هنا كود التضمين من تيك توك (TikTok Embed)
-                    لعرض أحدث المقاطع القصيرة.
+                    اینجا می‌توانید کد Embed تیک‌تاک را قرار دهید تا ویدیوهای کوتاه نمایش یابد.
                 </div>
                 <a href="https://www.tiktok.com/@USERNAME" target="_blank" class="media-link">
-                    زيارة حساب تيك توك ↗
+                    TikTok ↗
                 </a>
             </article>
         </div>
@@ -827,23 +823,33 @@
             <div class="highlight-box">
                 <div class="lang-block" data-lang="ar">
                     <p>
-                        <strong>نبحث عن الاهتمام قبل الدعم المالي.</strong><br>
-                        إذا كنت فردًا، إعلاميًا، أكاديميًا أو تمثل مؤسسة ترغب في معرفة المزيد عن العرب في أفغانستان
-                        أو التعاون مستقبلًا، يسعدنا تواصلك.
+                        <strong>نتیجه‌گیری:</strong><br>
+                        «نورُ المعرفة» تلاشی است برای ایجاد یک حرکت فرهنگی، علمی و اجتماعی پایدار
+                        که بتواند ظرفیت‌های جامعه عرب افغانستان را به شکلی شایسته معرفی کرده و
+                        زمینه توسعه فرهنگی، آموزشی و اجتماعی این جامعه را فراهم سازد.
+                        این ابتکار امیدوار است با همکاری رهبران دلسوز و نهادهای فرهنگی جهان عرب،
+                        به پلی میان عرب‌های افغانستان و جهان عرب تبدیل شود.
                     </p>
                 </div>
                 <div class="lang-block" data-lang="en" style="display:none;">
                     <p>
-                        <strong>For now, we are seeking attention, not funds.</strong><br>
-                        If you are an individual, journalist, academic or organisation interested in
-                        the Arab minority in Afghanistan or potential cooperation, we would be glad to hear from you.
+                        <strong>Conclusion:</strong><br>
+                        “Noor Al Marefat” seeks to build a long‑term cultural, academic and social
+                        movement that presents the capacities of Arabs in Afghanistan in a dignified
+                        way and opens paths for development. With the support of committed leaders
+                        and institutions in the Arab world, it aims to become a bridge between Arabs
+                        in Afghanistan and the wider Arab world.
                     </p>
                 </div>
-                <div class="lang-block" data-lang="fa" style="display:none; font-family: 'Vazirmatn', 'Tajawal', sans-serif;">
+                <div class="lang-block" data-lang="fa" style="display:none; font-family:'Vazirmatn','Tajawal',sans-serif;">
                     <p>
-                        <strong>در حال حاضر به دنبال جلب توجه و آگاهی هستیم، نه کمک مالی.</strong><br>
-                        اگر فرد، روزنامه‌نگار، پژوهشگر یا نهاد علاقه‌مند به وضعیت عرب‌های افغانستان
-                        و همکاری آینده هستید، خوشحال می‌شویم با ما در تماس باشید.
+                        <strong>نتیجه‌گیری:</strong><br>
+                        پروژه «نورُ المعرفة» تلاشی است برای ایجاد یک حرکت فرهنگی، علمی و اجتماعی پایدار
+                        که بتواند ظرفیت‌های جامعه عرب افغانستان را به شکلی شایسته معرفی کرده و در عین حال
+                        زمینه توسعه فرهنگی، آموزشی و اجتماعی این جامعه را فراهم سازد.
+                        این ابتکار امیدوار است با همکاری و حمایت رهبران دلسوز، نهادهای فرهنگی و شخصیت‌های
+                        برجسته جهان عرب، به پلی برای پیوند میان عرب‌های افغانستان و جهان عرب تبدیل شده و
+                        گامی مؤثر در جهت حفظ هویت و بهبود وضعیت اجتماعی این جامعه بردارد.
                     </p>
                 </div>
 
@@ -854,15 +860,16 @@
             </div>
 
             <div class="card">
-                <h3 class="card-title">ملاحظات شفافية / Transparency note</h3>
+                <h3 class="card-title">Contact & transparency</h3>
                 <div class="card-body">
                     <p>
-                        هذه الصفحة للتعريف والتواصل فقط. الأطر القانونية والشراكات المستقبلية
-                        يتم تطويرها بعناية، وأي تعاون سيتم بطُرق رسمية وموثّقة.
+                        This website is an informational and contact platform for the Noor Al Marefat initiative.
+                        Any future legal registration, partnerships or funding mechanisms will be communicated
+                        transparently to interested partners.
                     </p>
                     <p style="margin-top:0.7rem;">
-                        This website serves as an informational and contact point. Legal registration
-                        and partnerships will be communicated transparently to interested parties.
+                        برای مکاتبه پژوهشی، رسانه‌ای یا همکاری فرهنگی می‌توانید مستقیماً
+                        به نشانی بالا ایمیل بفرستید.
                     </p>
                 </div>
             </div>
@@ -888,35 +895,26 @@
     const yearSpan = document.getElementById('year');
 
     function setLanguage(lang) {
-        // toggle body direction
         if (lang === 'en') {
             document.documentElement.lang = 'en';
             document.documentElement.dir = 'ltr';
             document.body.classList.remove('rtl');
             document.body.classList.add('ltr');
-        } else if (lang === 'fa') {
-            document.documentElement.lang = 'fa';
-            document.documentElement.dir = 'rtl';
-            document.body.classList.remove('ltr');
-            document.body.classList.add('rtl');
         } else {
-            document.documentElement.lang = 'ar';
+            document.documentElement.lang = lang === 'fa' ? 'fa' : 'ar';
             document.documentElement.dir = 'rtl';
             document.body.classList.remove('ltr');
             document.body.classList.add('rtl');
         }
 
-        // buttons
         langButtons.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.setLang === lang);
         });
 
-        // content blocks
         langBlocks.forEach(block => {
             block.style.display = block.dataset.lang === lang ? 'block' : 'none';
         });
 
-        // brand + nav texts
         brandSubs.forEach(el => {
             el.style.display = el.dataset.langBlock === lang ? '' : 'none';
         });
@@ -926,8 +924,7 @@
         btn.addEventListener('click', () => setLanguage(btn.dataset.setLang));
     });
 
-    // init
-    setLanguage('ar');
+    setLanguage('fa'); // du kannst hier 'ar' oder 'en' als Standard setzen
     yearSpan.textContent = new Date().getFullYear();
 </script>
 </body>
