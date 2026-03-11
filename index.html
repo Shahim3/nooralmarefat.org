@@ -175,30 +175,29 @@
             font-size: 0.75rem; font-weight: 600; border: 1px solid transparent;
             text-decoration: none; transition: all 0.18s; flex-shrink: 0;
         }
-        .platform-content { flex: 1; }
 
         /* Platform colours */
-        .platform-block.yt { background: radial-gradient(circle at top left, rgba(255,0,0,0.12), rgba(15,23,42,0.98)); border-color: rgba(255,0,0,0.25); }
-        .platform-icon.yt { background: rgba(255,0,0,0.15); }
+        .platform-block.yt  { background: radial-gradient(circle at top left, rgba(255,0,0,0.12),      rgba(15,23,42,0.98)); border-color: rgba(255,0,0,0.25); }
+        .platform-icon.yt   { background: rgba(255,0,0,0.15); }
         .platform-link-btn.yt { background: rgba(255,0,0,0.15); border-color: rgba(255,0,0,0.4); color: #fca5a5; }
         .platform-link-btn.yt:hover { background: rgba(255,0,0,0.25); }
 
-        .platform-block.ig { background: radial-gradient(circle at top left, rgba(131,58,180,0.14), rgba(15,23,42,0.98)); border-color: rgba(131,58,180,0.3); }
-        .platform-icon.ig { background: linear-gradient(135deg, rgba(131,58,180,0.3), rgba(253,29,29,0.2), rgba(252,176,69,0.2)); }
+        .platform-block.ig  { background: radial-gradient(circle at top left, rgba(131,58,180,0.14),   rgba(15,23,42,0.98)); border-color: rgba(131,58,180,0.3); }
+        .platform-icon.ig   { background: linear-gradient(135deg, rgba(131,58,180,0.3), rgba(253,29,29,0.2), rgba(252,176,69,0.2)); }
         .platform-link-btn.ig { background: rgba(131,58,180,0.15); border-color: rgba(131,58,180,0.45); color: #d8b4fe; }
         .platform-link-btn.ig:hover { background: rgba(131,58,180,0.28); }
 
-        .platform-block.tt { background: radial-gradient(circle at top left, rgba(0,242,234,0.1), rgba(15,23,42,0.98)); border-color: rgba(0,242,234,0.2); }
-        .platform-icon.tt { background: rgba(0,242,234,0.1); }
+        .platform-block.tt  { background: radial-gradient(circle at top left, rgba(0,242,234,0.1),     rgba(15,23,42,0.98)); border-color: rgba(0,242,234,0.2); }
+        .platform-icon.tt   { background: rgba(0,242,234,0.1); }
         .platform-link-btn.tt { background: rgba(0,242,234,0.1); border-color: rgba(0,242,234,0.35); color: #99f6e4; }
         .platform-link-btn.tt:hover { background: rgba(0,242,234,0.2); }
 
-        .platform-block.fb { background: radial-gradient(circle at top left, rgba(24,119,242,0.12), rgba(15,23,42,0.98)); border-color: rgba(24,119,242,0.25); }
-        .platform-icon.fb { background: rgba(24,119,242,0.15); }
+        .platform-block.fb  { background: radial-gradient(circle at top left, rgba(24,119,242,0.12),   rgba(15,23,42,0.98)); border-color: rgba(24,119,242,0.25); }
+        .platform-icon.fb   { background: rgba(24,119,242,0.15); }
         .platform-link-btn.fb { background: rgba(24,119,242,0.15); border-color: rgba(24,119,242,0.4); color: #93c5fd; }
         .platform-link-btn.fb:hover { background: rgba(24,119,242,0.25); }
 
-        /* YouTube feed */
+        /* YouTube feed cards */
         #yt-feed { display: flex; flex-direction: column; gap: 0.75rem; }
         .yt-video-card {
             display: flex; gap: 0.75rem; align-items: flex-start;
@@ -220,50 +219,34 @@
         }
         .yt-date { font-size: 0.72rem; color: var(--muted); }
         .yt-loading { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.85rem; }
-        .yt-error { color: #fca5a5; font-size: 0.82rem; padding: 1rem; }
+        .yt-error { color: #fca5a5; font-size: 0.82rem; padding: 1rem; line-height: 1.6; }
 
-        /* Sociablekit iframe wrapper */
+        /* SociableKIT iframe wrapper */
         .sk-iframe-wrap {
             border-radius: 0.9rem; overflow: hidden;
-            border: 1px solid rgba(148,163,184,0.15);
-            background: rgba(15,23,42,0.5);
+            border: 1px solid rgba(148,163,184,0.1);
+            background: rgba(15,23,42,0.4);
         }
         .sk-iframe-wrap iframe { display: block; border: none; }
-
-        /* Widget placeholder (für Instagram noch ohne Code & Facebook) */
-        .widget-zone {
-            flex: 1; border-radius: 0.9rem;
-            background: rgba(15,23,42,0.7); border: 1px dashed rgba(148,163,184,0.3);
-            display: flex; flex-direction: column;
-            align-items: center; justify-content: center;
-            text-align: center; padding: 1.2rem; gap: 0.5rem; min-height: 220px;
-        }
-        .widget-zone-icon { font-size: 2rem; opacity: 0.5; }
-        .widget-zone-text { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
-        .widget-zone-step {
-            font-size: 0.74rem; color: #6b7280;
-            background: rgba(55,65,81,0.5); padding: 0.3rem 0.7rem;
-            border-radius: 999px; margin-top: 0.2rem;
-        }
 
         /* CONTACT */
         .highlight-box {
             background: radial-gradient(circle at top right, var(--gold-soft), rgba(6,95,70,0.95));
             border-radius: 1.35rem; padding: 1.4rem 1.5rem; border: 1px solid rgba(250,204,21,0.75);
         }
+        .contact-pills { display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; margin-top: 0.8rem; }
         .email-pill {
             display: inline-flex; align-items: center; gap: 0.4rem;
             padding: 0.45rem 0.9rem; border-radius: 999px;
-            background: rgba(15,23,42,0.96); border: 1px solid rgba(148,163,184,0.8);
-            margin-top: 0.75rem; font-size: 0.88rem;
+            background: rgba(15,23,42,0.96); border: 1px solid rgba(148,163,184,0.8); font-size: 0.88rem;
         }
         .whatsapp-pill {
             display: inline-flex; align-items: center; gap: 0.4rem;
             padding: 0.45rem 0.9rem; border-radius: 999px;
             background: rgba(37,211,102,0.12); border: 1px solid rgba(37,211,102,0.6);
-            margin-top: 0.6rem; font-size: 0.88rem; color: #bbf7d0;
+            font-size: 0.88rem; color: #bbf7d0;
         }
-        .contact-pills { display: flex; flex-direction: column; align-items: flex-start; gap: 0.1rem; }
+
         footer {
             margin-top: 2.7rem; padding-top: 1.4rem;
             border-top: 1px solid rgba(31,41,55,0.95);
@@ -288,26 +271,31 @@
 </head>
 
 <body class="rtl">
+
+<!-- ══════════════════════════ HEADER ══════════════════════════ -->
 <header>
     <div class="header-inner">
         <div class="brand">
             <div class="brand-mark">ن</div>
             <div>
                 <div class="brand-text-main">نورُ المعرفة</div>
-                <div class="brand-text-sub" data-t='{"ar":"مبادرة للعرب في أفغانستان","en":"Initiative for Arabs in Afghanistan","fa":"ابتکار برای اعراب افغانستان"}'>مبادرة للعرب في أفغانستان</div>
+                <div class="brand-text-sub"
+                     data-t='{"ar":"مبادرة للعرب في أفغانستان","en":"Initiative for Arabs in Afghanistan","fa":"ابتکار برای اعراب افغانستان"}'>
+                    مبادرة للعرب في أفغانستان
+                </div>
             </div>
         </div>
         <nav>
             <div class="nav-links">
-                <a href="#about" data-t='{"ar":"المشروع","en":"Project","fa":"طرح"}'>المشروع</a>
-                <a href="#goals" data-t='{"ar":"الأهداف","en":"Objectives","fa":"اهداف"}'>الأهداف</a>
-                <a href="#media" data-t='{"ar":"الإعلام","en":"Media","fa":"رسانه"}'>الإعلام</a>
+                <a href="#about"   data-t='{"ar":"المشروع","en":"Project","fa":"طرح"}'>المشروع</a>
+                <a href="#goals"   data-t='{"ar":"الأهداف","en":"Objectives","fa":"اهداف"}'>الأهداف</a>
+                <a href="#media"   data-t='{"ar":"الإعلام","en":"Media","fa":"رسانه"}'>الإعلام</a>
                 <a href="#contact" data-t='{"ar":"التواصل","en":"Contact","fa":"ارتباط"}'>التواصل</a>
             </div>
             <div class="lang-switch">
                 <button class="lang-btn active" data-set-lang="ar">العربية</button>
-                <button class="lang-btn" data-set-lang="en">English</button>
-                <button class="lang-btn" data-set-lang="fa">فارسی</button>
+                <button class="lang-btn"        data-set-lang="en">English</button>
+                <button class="lang-btn"        data-set-lang="fa">فارسی</button>
             </div>
         </nav>
     </div>
@@ -315,20 +303,28 @@
 
 <main class="container">
 
-    <!-- HERO -->
+    <!-- ══════════════════════════ HERO ══════════════════════════ -->
     <section class="hero" id="top">
         <div class="hero-grid">
             <div>
                 <div class="kicker">
-                    <span class="kicker-pill" data-t='{"ar":"طرح ابتكار ثقافي–اجتماعي","en":"Cultural & social initiative","fa":"طرح ابتکار فرهنگی–اجتماعی"}'>طرح ابتكار ثقافي–اجتماعي</span>
-                    <span data-t='{"ar":"«نورُ المعرفة» للعرب في أفغانستان","en":"«Noor Al Marefat» for Arabs in Afghanistan","fa":"«نورُ المعرفة» برای اعراب افغانستان"}'>«نورُ المعرفة» للعرب في أفغانستان</span>
+                    <span class="kicker-pill"
+                          data-t='{"ar":"طرح ابتكار ثقافي–اجتماعي","en":"Cultural & social initiative","fa":"طرح ابتکار فرهنگی–اجتماعی"}'>
+                        طرح ابتكار ثقافي–اجتماعي
+                    </span>
+                    <span data-t='{"ar":"«نورُ المعرفة» للعرب في أفغانستان","en":"«Noor Al Marefat» for Arabs in Afghanistan","fa":"«نورُ المعرفة» برای اعراب افغانستان"}'>
+                        «نورُ المعرفة» للعرب في أفغانستان
+                    </span>
                 </div>
                 <h1 class="hero-title">
                     <span class="highlight">نورُ المعرفة</span><br>
-                    <span data-t='{"ar":"لإحياء الهوية الأصيلة للأقوام العربية في أفغانستان","en":"Reviving the authentic identity of Arab communities in Afghanistan","fa":"برای احیای هویت اصیل اقوام عرب در افغانستان"}'>لإحياء الهوية الأصيلة للأقوام العربية في أفغانستان</span>
+                    <span data-t='{"ar":"لإحياء الهوية الأصيلة للأقوام العربية في أفغانستان","en":"Reviving the authentic identity of Arab communities in Afghanistan","fa":"برای احیای هویت اصیل اقوام عرب در افغانستان"}'>
+                        لإحياء الهوية الأصيلة للأقوام العربية في أفغانستان
+                    </span>
                 </h1>
-                <p class="hero-subtitle" data-t='{"ar":"مشروع ثقافي، اجتماعي وتعليمي يهدف إلى التعريف، تقوية وإحياء هوية العرب في أفغانستان عبر منصة علمية، ثقافية وإعلامية. في هذه المرحلة نركّز على <strong>الوعي وبناء الشراكات</strong>، لا على جمع التبرعات المباشرة.","en":"A cultural, social and educational initiative designed to introduce, strengthen and revive the authentic identity of Arab communities in Afghanistan. At this stage we focus on <strong>awareness and building partnerships</strong>, not on direct fundraising.","fa":"پروژه‌ای فرهنگی، اجتماعی و آموزشی با هدف معرفی، تقویت و احیای هویت اصیل اقوام عرب در افغانستان. در این مرحله تمرکز ما بر <strong>آگاهی و ایجاد مشارکت</strong> است."}'>
-                    مشروع ثقافي، اجتماعي وتعليمي يهدف إلى التعريف، تقوية وإحياء هوية العرب في أفغانستان.
+                <p class="hero-subtitle"
+                   data-t='{"ar":"مشروع ثقافي، اجتماعي وتعليمي يهدف إلى التعريف، تقوية وإحياء هوية العرب في أفغانستان عبر منصة علمية، ثقافية وإعلامية. في هذه المرحلة نركّز على <strong>الوعي وبناء الشراكات</strong>، لا على جمع التبرعات المباشرة.","en":"A cultural, social and educational initiative designed to introduce, strengthen and revive the authentic identity of Arab communities in Afghanistan. At this stage we focus on <strong>awareness and building partnerships</strong>, not on direct fundraising.","fa":"پروژه‌ای فرهنگی، اجتماعی و آموزشی با هدف معرفی، تقویت و احیای هویت اصیل اقوام عرب در افغانستان. در این مرحله تمرکز ما بر <strong>آگاهی و ایجاد مشارکت</strong> است."}'>
+                    مشروع ثقافي، اجتماعي وتعليمي يهدف إلى التعريف، تقوية وإحياء هوية العرب في أفغانستان عبر منصة علمية، ثقافية وإعلامية. في هذه المرحلة نركّز على <strong>الوعي وبناء الشراكات</strong>، لا على جمع التبرعات المباشرة.
                 </p>
                 <div class="hero-actions">
                     <a href="mailto:info@nooralmarefat.org" class="btn btn-primary">📧 info@nooralmarefat.org</a>
@@ -336,15 +332,21 @@
                         <span data-t='{"ar":"📜 أهداف المشروع","en":"📜 Project Objectives","fa":"📜 اهداف پروژه"}'>📜 أهداف المشروع</span>
                     </a>
                 </div>
-                <p class="hero-note" data-t='{"ar":"يُرجى مشاركة هذه الصفحة مع أصدقائكم والمؤسسات الواعية في الدول العربية والمنطقة.","en":"Please share this page with friends and aware institutions in Arab countries and the wider region.","fa":"لطفاً این صفحه را با دوستان و نهادهای آگاه در کشورهای عربی و منطقه به اشتراک بگذارید."}'>يُرجى مشاركة هذه الصفحة مع أصدقائكم والمؤسسات الواعية في الدول العربية والمنطقة.</p>
+                <p class="hero-note"
+                   data-t='{"ar":"يُرجى مشاركة هذه الصفحة مع أصدقائكم والمؤسسات الواعية في الدول العربية والمنطقة.","en":"Please share this page with friends and aware institutions in Arab countries and the wider region.","fa":"لطفاً این صفحه را با دوستان و نهادهای آگاه در کشورهای عربی و منطقه به اشتراک بگذارید."}'>
+                    يُرجى مشاركة هذه الصفحة مع أصدقائكم والمؤسسات الواعية في الدول العربية والمنطقة.
+                </p>
             </div>
 
             <aside class="hero-card">
                 <div class="hero-card-badge">
                     <span>🔎</span>
-                    <span data-t='{"ar":"توثيق ثقافي منظّم – لا تبرعات في الوقت الراهن","en":"Documented cultural movement – no fundraising at this stage","fa":"حرکت فرهنگی مستند، نه جمع‌آوری فوری اعانه"}'>توثيق ثقافي منظّم – لا تبرعات في الوقت الراهن</span>
+                    <span data-t='{"ar":"توثيق ثقافي منظّم – لا تبرعات في الوقت الراهن","en":"Documented cultural movement – no fundraising at this stage","fa":"حرکت فرهنگی مستند، نه جمع‌آوری فوری اعانه"}'>
+                        توثيق ثقافي منظّم – لا تبرعات في الوقت الراهن
+                    </span>
                 </div>
-                <p class="hero-card-main" data-t='{"ar":"يُقدَّر أن نحو <strong>عشرة ملايين عربي</strong> يعيشون في أفغانستان. تسعى «نورُ المعرفة» إلى تقديم رواية منظّمة وعلمية عن هذا المجتمع وإرساء أُسُس برامج تعليمية واجتماعية مستقبلية.","en":"An estimated <strong>ten million Arabs</strong> live in Afghanistan. Noor Al Marefat seeks to present an organised, academic narrative about this community and lay the groundwork for future educational and social programmes.","fa":"تخمین می‌شود حدود <strong>ده میلیون عرب</strong> در افغانستان زندگی کنند. «نورُ المعرفة» تلاش می‌کند روایتی منظم و علمی از این جامعه ارائه دهد."}'>
+                <p class="hero-card-main"
+                   data-t='{"ar":"يُقدَّر أن نحو <strong>عشرة ملايين عربي</strong> يعيشون في أفغانستان. تسعى «نورُ المعرفة» إلى تقديم رواية منظّمة وعلمية عن هذا المجتمع وإرساء أُسُس برامج تعليمية واجتماعية مستقبلية.","en":"An estimated <strong>ten million Arabs</strong> live in Afghanistan. Noor Al Marefat seeks to present an organised, academic narrative about this community and lay the groundwork for future educational and social programmes.","fa":"تخمین می‌شود حدود <strong>ده میلیون عرب</strong> در افغانستان زندگی کنند. «نورُ المعرفة» تلاش می‌کند روایتی منظم و علمی از این جامعه ارائه دهد."}'>
                     يُقدَّر أن نحو <strong>عشرة ملايين عربي</strong> يعيشون في أفغانستان.
                 </p>
                 <div class="stat-row">
@@ -357,29 +359,40 @@
                         <div class="stat-label" data-t='{"ar":"التركيز على الهوية واللغة والتعليم","en":"Focus on identity, language and education","fa":"تمرکز بر هویت، زبان و آموزش"}'>التركيز على الهوية واللغة والتعليم</div>
                     </div>
                 </div>
-                <p class="trust-text" data-t='{"ar":"هذا الموقع للتعريف والتواصل فقط. أي دعم رسمي مستقبلاً سيُعلَن بشفافية تامة.","en":"This website is solely for information and contact. Any future official support will be announced transparently.","fa":"این وب‌سایت صرفاً برای معرفی طرح و ایجاد ارتباط است. هرگونه حمایت رسمی در آینده شفاف اعلام خواهد شد."}'>
+                <p class="trust-text"
+                   data-t='{"ar":"هذا الموقع للتعريف والتواصل فقط. أي دعم رسمي مستقبلاً سيُعلَن بشفافية تامة.","en":"This website is solely for information and contact. Any future official support will be announced transparently.","fa":"این وب‌سایت صرفاً برای معرفی طرح و ایجاد ارتباط است. هرگونه حمایت رسمی در آینده شفاف اعلام خواهد شد."}'>
                     هذا الموقع للتعريف والتواصل فقط. أي دعم رسمي مستقبلاً سيُعلَن بشفافية تامة.
                 </p>
             </aside>
         </div>
     </section>
 
-    <!-- INTRO -->
+    <!-- ══════════════════════════ INTRO ══════════════════════════ -->
     <section id="about">
-        <div class="section-label" data-t='{"ar":"مقدمة المشروع","en":"Introduction","fa":"مقدمه"}'>مقدمة المشروع</div>
-        <h2 class="section-title" data-t='{"ar":"طرح ابتكار ثقافي–اجتماعي «نورُ المعرفة»","en":"«Noor Al Marefat» – Cultural & Social Initiative","fa":"طرح ابتکار فرهنگی–اجتماعی «نورُ المعرفة»"}'>طرح ابتكار ثقافي–اجتماعي «نورُ المعرفة»</h2>
-        <p class="section-subtitle" data-t='{"ar":"صُمِّم مشروع «نورُ المعرفة» كابتكار ثقافي، اجتماعي وتعليمي يهدف إلى التعريف، تقوية وإحياء الهوية الأصيلة للأقوام العربية في أفغانستان. يسعى هذا المشروع إلى إنشاء منصة علمية، ثقافية وإعلامية تُعرّف بشكل منظم ومُوثَّق بطاقات، إنجازات وتحديات المجتمع العربي في أفغانستان أمام العالم العربي والمجتمع الدولي.","en":"The «Noor Al Marefat» project is a cultural, social and educational initiative designed to introduce, strengthen and revive the authentic identity of Arab communities in Afghanistan. It aims to build a scientific, cultural and media platform that presents the capacities, achievements and challenges of this community to the Arab world and the international community.","fa":"پروژه «نورُ المعرفة» به عنوان یک ابتکار فرهنگی، اجتماعی و آموزشی با هدف معرفی، تقویت و احیای هویت اصیل اقوام عرب در افغانستان طراحی گردیده است."}'>
+        <div class="section-label"
+             data-t='{"ar":"مقدمة المشروع","en":"Introduction","fa":"مقدمه"}'>مقدمة المشروع</div>
+        <h2 class="section-title"
+            data-t='{"ar":"طرح ابتكار ثقافي–اجتماعي «نورُ المعرفة»","en":"«Noor Al Marefat» – Cultural & Social Initiative","fa":"طرح ابتکار فرهنگی–اجتماعی «نورُ المعرفة»"}'>
+            طرح ابتكار ثقافي–اجتماعي «نورُ المعرفة»
+        </h2>
+        <p class="section-subtitle"
+           data-t='{"ar":"صُمِّم مشروع «نورُ المعرفة» كابتكار ثقافي، اجتماعي وتعليمي يهدف إلى التعريف، تقوية وإحياء الهوية الأصيلة للأقوام العربية في أفغانستان. يسعى هذا المشروع إلى إنشاء منصة علمية، ثقافية وإعلامية تُعرّف بشكل منظم ومُوثَّق بطاقات، إنجازات وتحديات المجتمع العربي في أفغانستان أمام العالم العربي والمجتمع الدولي.","en":"The «Noor Al Marefat» project is a cultural, social and educational initiative designed to introduce, strengthen and revive the authentic identity of Arab communities in Afghanistan. It aims to build a scientific, cultural and media platform that presents the capacities, achievements and challenges of this community to the Arab world and the international community.","fa":"پروژه «نورُ المعرفة» به عنوان یک ابتکار فرهنگی، اجتماعی و آموزشی با هدف معرفی، تقویت و احیای هویت اصیل اقوام عرب در افغانستان طراحی گردیده است."}'>
             صُمِّم مشروع «نورُ المعرفة» كابتكار ثقافي، اجتماعي وتعليمي يهدف إلى التعريف، تقوية وإحياء الهوية الأصيلة للأقوام العربية في أفغانستان.
         </p>
-        <p class="section-subtitle" data-t='{"ar":"يتشكّل هذا المشروع في إطار عمل مؤسسة خيرية وشبكات إعلامية واجتماعية، ويطمح إلى جذب اهتمام القادة الواعين، والمؤسسات الثقافية، والشخصيات المؤثرة في العالم العربي من أجل فتح آفاق الدعم والتعاون.","en":"The initiative operates within the framework of a charitable foundation and through media and social networks. It seeks to attract the attention of thoughtful leaders, cultural institutions and influential figures across the Arab world in order to create opportunities for development.","fa":"این طرح در چارچوب فعالیت‌های یک بنیاد خیریه و شبکه‌های رسانه‌ای شکل گرفته و می‌کوشد با جلب توجه رهبران آگاه و نهادهای فرهنگی جهان عرب، زمینه حمایت و همکاری را فراهم سازد."}'>
+        <p class="section-subtitle"
+           data-t='{"ar":"يتشكّل هذا المشروع في إطار عمل مؤسسة خيرية وشبكات إعلامية واجتماعية، ويطمح إلى جذب اهتمام القادة الواعين، والمؤسسات الثقافية، والشخصيات المؤثرة في العالم العربي من أجل فتح آفاق الدعم والتعاون لتطوير الأوضاع العلمية، الثقافية والاجتماعية لهذه المجتمعات.","en":"The initiative operates within the framework of a charitable foundation and through media and social networks. It seeks to attract the attention of thoughtful leaders, cultural institutions and influential figures across the Arab world in order to create opportunities for scientific, cultural and social development.","fa":"این طرح در چارچوب فعالیت‌های یک بنیاد خیریه و شبکه‌های رسانه‌ای شکل گرفته و می‌کوشد با جلب توجه رهبران آگاه و نهادهای فرهنگی جهان عرب، زمینه حمایت و همکاری را فراهم سازد."}'>
             يتشكّل هذا المشروع في إطار عمل مؤسسة خيرية وشبكات إعلامية واجتماعية.
         </p>
     </section>
 
-    <!-- GOALS -->
+    <!-- ══════════════════════════ GOALS ══════════════════════════ -->
     <section id="goals">
-        <div class="section-label" data-t='{"ar":"الأهداف الأساسية","en":"Core objectives","fa":"اهداف اساسی پروژه"}'>الأهداف الأساسية</div>
-        <h2 class="section-title" data-t='{"ar":"المحاور الستة لمبادرة «نورُ المعرفة»","en":"Six pillars of the initiative","fa":"شش محور اصلی «نورُ المعرفة»"}'>المحاور الستة لمبادرة «نورُ المعرفة»</h2>
+        <div class="section-label"
+             data-t='{"ar":"الأهداف الأساسية","en":"Core objectives","fa":"اهداف اساسی پروژه"}'>الأهداف الأساسية</div>
+        <h2 class="section-title"
+            data-t='{"ar":"المحاور الستة لمبادرة «نورُ المعرفة»","en":"Six pillars of the initiative","fa":"شش محور اصلی «نورُ المعرفة»"}'>
+            المحاور الستة لمبادرة «نورُ المعرفة»
+        </h2>
 
         <div class="card" style="margin-bottom:1rem;">
             <h3 class="card-title" data-t='{"ar":"١. إنشاء مركز ثقافي–علمي شامل","en":"1. Establishing a comprehensive cultural & academic centre","fa":"۱. ایجاد مرکز جامع فرهنگی و علمی"}'>١. إنشاء مركز ثقافي–علمي شامل</h3>
@@ -424,11 +437,20 @@
         </div>
     </section>
 
-    <!-- SOCIAL MEDIA -->
+    <!-- ══════════════════════════ SOCIAL MEDIA ══════════════════════════ -->
     <section id="media">
-        <div class="section-label" data-t='{"ar":"تابعونا على وسائل التواصل","en":"Follow us on social media","fa":"ما را در شبکه‌های اجتماعی دنبال کنید"}'>تابعونا على وسائل التواصل</div>
-        <h2 class="section-title" data-t='{"ar":"آخر المحتوى من قنواتنا","en":"Latest content from our channels","fa":"آخرین محتوا از کانال‌های ما"}'>آخر المحتوى من قنواتنا</h2>
-        <p class="section-subtitle" data-t='{"ar":"يتحدّث محتوى يوتيوب وتيك توك تلقائيًا عند نشر مقاطع جديدة. تابعونا أيضًا على إنستغرام وفيسبوك.","en":"YouTube and TikTok content updates automatically when new videos are published. Follow us also on Instagram and Facebook.","fa":"محتوای یوتیوب و تیک‌تاک با هر انتشار جدید به‌صورت خودکار به‌روز می‌شوند. ما را همچنین در اینستاگرام و فیسبوک دنبال کنید."}'>يتحدّث محتوى يوتيوب وتيك توك تلقائيًا عند نشر مقاطع جديدة.</p>
+        <div class="section-label"
+             data-t='{"ar":"تابعونا على وسائل التواصل","en":"Follow us on social media","fa":"ما را در شبکه‌های اجتماعی دنبال کنید"}'>
+            تابعونا على وسائل التواصل
+        </div>
+        <h2 class="section-title"
+            data-t='{"ar":"آخر المحتوى من قنواتنا","en":"Latest content from our channels","fa":"آخرین محتوا از کانال‌های ما"}'>
+            آخر المحتوى من قنواتنا
+        </h2>
+        <p class="section-subtitle"
+           data-t='{"ar":"يتحدّث محتوى جميع القنوات تلقائيًا عند نشر محتوى جديد.","en":"All channel content updates automatically when new content is published.","fa":"محتوای تمام کانال‌ها با هر انتشار جدید به‌صورت خودکار به‌روز می‌شوند."}'>
+            يتحدّث محتوى جميع القنوات تلقائيًا عند نشر محتوى جديد.
+        </p>
 
         <div class="social-grid">
 
@@ -446,14 +468,15 @@
                        class="platform-link-btn yt"
                        data-t='{"ar":"القناة ↗","en":"Channel ↗","fa":"کانال ↗"}'>القناة ↗</a>
                 </div>
-                <div class="platform-content">
-                    <div id="yt-feed">
-                        <div class="yt-loading" data-t='{"ar":"⏳ جارٍ تحميل آخر الفيديوهات…","en":"⏳ Loading latest videos…","fa":"⏳ در حال بارگذاری آخرین ویدیوها…"}'>⏳ جارٍ تحميل آخر الفيديوهات…</div>
+                <div id="yt-feed">
+                    <div class="yt-loading"
+                         data-t='{"ar":"⏳ جارٍ تحميل آخر الفيديوهات…","en":"⏳ Loading latest videos…","fa":"⏳ در حال بارگذاری آخرین ویدیوها…"}'>
+                        ⏳ جارٍ تحميل آخر الفيديوهات…
                     </div>
                 </div>
             </div>
 
-            <!-- ── TIKTOK (SociableKIT Hashtag Feed – LIVE) ── -->
+            <!-- ── TIKTOK – SociableKIT Hashtag Feed ── -->
             <div class="platform-block tt">
                 <div class="platform-header">
                     <div class="platform-title-row">
@@ -469,87 +492,52 @@
                 </div>
                 <div class="platform-content">
                     <div class="sk-iframe-wrap">
-                        <!-- SociableKIT TikTok Hashtag Feed – Live Widget -->
-<!-- Wird automatisch ausgeblendet sobald Widget geladen ist -->
-<p style="text-align:center; color:#9ca3af; font-size:0.82rem; padding:1rem 0;">
-    ⏳ جارٍ تحميل محتوى تيك توك… / TikTok-Inhalte werden geladen…
-</p>
-
-                        
                         <div class='sk-ww-tiktok-hashtag-feed' data-embed-id='25662144'></div>
                     </div>
                 </div>
             </div>
 
-           <!-- ── INSTAGRAM ── -->
-<div class="platform-block ig">
-    <div class="platform-header">
-        <div class="platform-title-row">
-            <div class="platform-icon ig">📸</div>
-            <div>
-                <div class="platform-name">Instagram</div>
-                <div class="platform-handle">@nooralmarefat</div>
-            </div>
-        </div>
-        <a href="https://www.instagram.com/nooralmarefat/" target="_blank"
-           class="platform-link-btn ig"
-           data-t='{"ar":"الصفحة ↗","en":"Profile ↗","fa":"پروفایل ↗"}'>الصفحة ↗</a>
-    </div>
-    <div class="platform-content">
-        <div class="sk-iframe-wrap">
-            <iframe src="https://widgets.sociablekit.com/instagram-story-highlights/iframe/25662151"
-                    frameborder="0" width="100%" height="600px"
-                    style="border-radius:0.9rem; display:block;">
-            </iframe>
-        </div>
-    </div>
-</div>
-
-                    -->
-                    <div class="widget-zone">
-                        <div class="widget-zone-icon">📸</div>
-                        <div class="widget-zone-text"
-                             data-t='{"ar":"أضف كود SociableKIT أو Behold.so هنا لعرض منشورات إنستغرام تلقائيًا","en":"Paste your SociableKIT or Behold.so widget code here to display Instagram posts automatically","fa":"کد SociableKIT یا Behold.so را اینجا قرار دهید تا پست‌های اینستاگرام نمایش داده شوند"}'>أضف كود SociableKIT أو Behold.so هنا لعرض منشورات إنستغرام تلقائيًا</div>
-                        <a href="https://www.sociablekit.com" target="_blank" class="widget-zone-step">→ sociablekit.com (kostenlos)</a>
-                        <a href="https://www.instagram.com/nooralmarefat/" target="_blank"
-                           class="platform-link-btn ig" style="margin-top:0.5rem;"
-                           data-t='{"ar":"زيارة الصفحة مباشرةً ↗","en":"Visit profile directly ↗","fa":"مشاهده پروفایل ↗"}'>زيارة الصفحة مباشرةً ↗</a>
+            <!-- ── INSTAGRAM – SociableKIT Story Highlights ── -->
+            <div class="platform-block ig">
+                <div class="platform-header">
+                    <div class="platform-title-row">
+                        <div class="platform-icon ig">📸</div>
+                        <div>
+                            <div class="platform-name">Instagram</div>
+                            <div class="platform-handle">@nooralmarefat</div>
+                        </div>
+                    </div>
+                    <a href="https://www.instagram.com/nooralmarefat/" target="_blank"
+                       class="platform-link-btn ig"
+                       data-t='{"ar":"الصفحة ↗","en":"Profile ↗","fa":"پروفایل ↗"}'>الصفحة ↗</a>
+                </div>
+                <div class="platform-content">
+                    <div class="sk-iframe-wrap">
+                        <iframe src="https://widgets.sociablekit.com/instagram-story-highlights/iframe/25662151"
+                                frameborder="0" width="100%" height="600"
+                                style="border-radius:0.9rem; display:block;">
+                        </iframe>
                     </div>
                 </div>
             </div>
 
-            <!-- ── FACEBOOK (Platzhalter – selbst befüllen) ── -->
+            <!-- ── FACEBOOK – SociableKIT Profile Feed ── -->
             <div class="platform-block fb">
                 <div class="platform-header">
                     <div class="platform-title-row">
                         <div class="platform-icon fb">📘</div>
                         <div>
                             <div class="platform-name">Facebook</div>
-                            <div class="platform-handle"
-                                 data-t='{"ar":"صفحتنا على فيسبوك","en":"Our Facebook Page","fa":"صفحه فیسبوک ما"}'>صفحتنا على فيسبوك</div>
+                            <div class="platform-handle">@nooralmarefat</div>
                         </div>
                     </div>
-                    <!-- DEINE FACEBOOK PAGE URL hier einfügen: -->
-                    <a href="https://www.facebook.com/DEINE_SEITE_HIER" target="_blank"
+                    <a href="https://www.facebook.com/nooralmarefat" target="_blank"
                        class="platform-link-btn fb"
-                       data-t='{"ar":"الصفحة ↗","en":"Page ↗","fa":"صفحه ↗"}'>الصفحة ↗</a>
+                       data-t='{"ar":"الصفحة ↗","en":"Profile ↗","fa":"پروفایل ↗"}'>الصفحة ↗</a>
                 </div>
                 <div class="platform-content">
-                    <!--
-                    ► FACEBOOK PAGE PLUGIN (kostenlos, offiziell):
-                       1. developers.facebook.com/docs/plugins/page-plugin
-                       2. Deine Page-URL eingeben → Code generieren → unten einfügen
-                       Beispiel:
-                       <iframe src="https://www.facebook.com/plugins/page.php?href=DEINE_URL&tabs=timeline&width=400&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false"
-                               width="100%" height="500" style="border:none;overflow:hidden;border-radius:0.9rem;"
-                               scrolling="no" frameborder="0" allowfullscreen="true"
-                               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                    -->
-                    <div class="widget-zone">
-                        <div class="widget-zone-icon">📘</div>
-                        <div class="widget-zone-text"
-                             data-t='{"ar":"أضف Facebook Page Plugin هنا. اذهب إلى developers.facebook.com/docs/plugins/page-plugin، أدخل رابط صفحتك واحصل على الكود.","en":"Paste your Facebook Page Plugin code here. Go to developers.facebook.com/docs/plugins/page-plugin, enter your page URL and copy the generated code.","fa":"کد Facebook Page Plugin را اینجا قرار دهید. به developers.facebook.com/docs/plugins/page-plugin بروید و کد را دریافت کنید."}'>أضف Facebook Page Plugin – اذهب إلى developers.facebook.com لتوليد الكود</div>
-                        <span class="widget-zone-step">→ developers.facebook.com/docs/plugins/page-plugin</span>
+                    <div class="sk-iframe-wrap">
+                        <div class='sk-ww-facebook-profile' data-embed-id='25662166'></div>
                     </div>
                 </div>
             </div>
@@ -557,15 +545,17 @@
         </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- ══════════════════════════ CONTACT ══════════════════════════ -->
     <section id="contact">
         <div class="grid-2">
             <div class="highlight-box">
-                <div class="section-label" data-t='{"ar":"الخاتمة","en":"Conclusion","fa":"نتیجه‌گیری"}'>الخاتمة</div>
-                <p data-t='{"ar":"مشروع «نورُ المعرفة» مسعى لإقامة حركة ثقافية وعلمية واجتماعية راسخة، تُقدّم قدرات المجتمع العربي في أفغانستان بالصورة اللائقة، وتُمهّد في الوقت ذاته لتطوير ثقافي وتعليمي واجتماعي مستدام لهذا المجتمع.","en":"The «Noor Al Marefat» project strives to build a lasting cultural, academic and social movement that presents the capacities of Arabs in Afghanistan in a dignified manner and paves the way for sustainable cultural, educational and social development for this community.","fa":"پروژه «نورُ المعرفة» تلاشی است برای ایجاد یک حرکت فرهنگی، علمی و اجتماعی پایدار که بتواند ظرفیت‌های جامعه عرب افغانستان را به شکلی شایسته معرفی کرده و در عین حال زمینه توسعه فرهنگی، آموزشی و اجتماعی این جامعه را فراهم سازد."}'>
+                <div class="section-label"
+                     data-t='{"ar":"الخاتمة","en":"Conclusion","fa":"نتیجه‌گیری"}'>الخاتمة</div>
+                <p data-t='{"ar":"مشروع «نورُ المعرفة» مسعى لإقامة حركة ثقافية وعلمية واجتماعية راسخة، تُقدّم قدرات المجتمع العربي في أفغانستان بالصورة اللائقة، وتُمهّد في الوقت ذاته لتطوير ثقافي وتعليمي واجتماعي مستدام لهذا المجتمع.","en":"The «Noor Al Marefat» project strives to build a lasting cultural, academic and social movement that presents the capacities of Arabs in Afghanistan in a dignified manner and paves the way for sustainable cultural, educational and social development for this community.","fa":"پروژه «نورُ المعرفة» تلاشی است برای ایجاد یک حرکت فرهنگی، علمی و اجتماعی پایدار که بتواند ظرفیت‌های جامعه عرب افغانستان را به شکلی شایسته معرفی کند."}'>
                     مشروع «نورُ المعرفة» مسعى لإقامة حركة ثقافية وعلمية واجتماعية راسخة.
                 </p>
-                <p style="margin-top:0.9rem;" data-t='{"ar":"يأمل هذا الابتكار أن يتحوّل – بتعاون ودعم القادة المخلصين والمؤسسات الثقافية والشخصيات البارزة في العالم العربي – إلى جسر حقيقي بين عرب أفغانستان وعالمهم العربي، وأن يُسهم إسهامًا فاعلًا في صون هويتهم وتطوير أوضاعهم الثقافية والاجتماعية.","en":"This initiative hopes that – with the cooperation and support of committed leaders, cultural institutions and prominent figures in the Arab world – it will become a genuine bridge between Arabs in Afghanistan and the wider Arab world, and take an effective step towards preserving their identity and improving their cultural and social situation.","fa":"این ابتکار امیدوار است با همکاری و حمایت رهبران دلسوز، نهادهای فرهنگی و شخصیت‌های برجسته جهان عرب، به پلی برای پیوند میان عرب‌های افغانستان و جهان عرب تبدیل شده و گامی مؤثر در جهت حفظ هویت، توسعه فرهنگی و بهبود وضعیت اجتماعی این جامعه بردارد."}'>
+                <p style="margin-top:0.9rem;"
+                   data-t='{"ar":"يأمل هذا الابتكار أن يتحوّل – بتعاون ودعم القادة المخلصين والمؤسسات الثقافية والشخصيات البارزة في العالم العربي – إلى جسر حقيقي بين عرب أفغانستان وعالمهم العربي.","en":"This initiative hopes that – with the cooperation and support of committed leaders, cultural institutions and prominent figures in the Arab world – it will become a genuine bridge between Arabs in Afghanistan and the wider Arab world.","fa":"این ابتکار امیدوار است با همکاری و حمایت رهبران دلسوز و نهادهای فرهنگی جهان عرب، به پلی برای پیوند میان عرب‌های افغانستان و جهان عرب تبدیل شود."}'>
                     يأمل هذا الابتكار أن يتحوّل إلى جسر حقيقي بين عرب أفغانستان وعالمهم العربي.
                 </p>
                 <div class="contact-pills">
@@ -583,12 +573,16 @@
             </div>
 
             <div class="card">
-                <h3 class="card-title" data-t='{"ar":"الشفافية والتواصل","en":"Transparency & Contact","fa":"شفافیت و ارتباط"}'>الشفافية والتواصل</h3>
+                <h3 class="card-title"
+                    data-t='{"ar":"الشفافية والتواصل","en":"Transparency & Contact","fa":"شفافیت و ارتباط"}'>
+                    الشفافية والتواصل
+                </h3>
                 <div class="card-body">
                     <p data-t='{"ar":"هذا الموقع منصة تعريفية وتواصلية فقط. أي تسجيل قانوني، شراكات أو آليات دعم مستقبلية ستُعلَن بشفافية تامة لجميع الأطراف المعنية.","en":"This website serves as an informational and contact platform only. Any legal registration, partnerships or future funding mechanisms will be communicated transparently to all relevant parties.","fa":"این وب‌سایت صرفاً یک بستر اطلاع‌رسانی و ارتباطی است. هرگونه ثبت قانونی، مشارکت یا ساز‌و‌کار کمک‌رسانی آینده به‌صورت شفاف اعلام خواهد شد."}'>
-                        هذا الموقع منصة تعريفية وتواصلية فقط. أي تسجيل قانوني، شراكات أو آليات دعم مستقبلية ستُعلَن بشفافية تامة.
+                        هذا الموقع منصة تعريفية وتواصلية فقط. أي تسجيل قانوني أو شراكات مستقبلية ستُعلَن بشفافية تامة.
                     </p>
-                    <p style="margin-top:0.7rem;" data-t='{"ar":"للتواصل البحثي أو الإعلامي أو للشراكة الثقافية، يُرجى مراسلتنا على البريد الإلكتروني أعلاه أو عبر واتساب.","en":"For academic, media or cultural partnership enquiries, please write to us at the email address above or contact us via WhatsApp.","fa":"برای مکاتبه پژوهشی، رسانه‌ای یا همکاری فرهنگی، لطفاً به آدرس ایمیل بالا یا از طریق واتساپ با ما تماس بگیرید."}'>
+                    <p style="margin-top:0.7rem;"
+                       data-t='{"ar":"للتواصل البحثي أو الإعلامي أو للشراكة الثقافية، يُرجى مراسلتنا على البريد الإلكتروني أعلاه أو عبر واتساب.","en":"For academic, media or cultural partnership enquiries, please write to us at the email address above or contact us via WhatsApp.","fa":"برای مکاتبه پژوهشی، رسانه‌ای یا همکاری فرهنگی، لطفاً به آدرس ایمیل بالا یا از طریق واتساپ با ما تماس بگیرید."}'>
                         للتواصل البحثي أو الإعلامي أو للشراكة الثقافية، يُرجى مراسلتنا على البريد الإلكتروني أو عبر واتساب.
                     </p>
                 </div>
@@ -596,7 +590,8 @@
         </div>
 
         <footer>
-            <div>© <span id="year"></span> Noor Al Marefat / نورُ المعرفة –
+            <div>
+                © <span id="year"></span> Noor Al Marefat / نورُ المعرفة –
                 <span data-t='{"ar":"جميع الحقوق محفوظة","en":"All rights reserved","fa":"تمام حقوق محفوظ است"}'>جميع الحقوق محفوظة</span>
             </div>
             <div class="footer-links">
@@ -609,11 +604,14 @@
 
 </main>
 
-<!-- SociableKIT TikTok Widget Script -->
+<!-- ══ SociableKIT Scripts (alle 3 zusammen) ══ -->
 <script src='https://widgets.sociablekit.com/tiktok-hashtag-feed/widget.js' defer></script>
+<script src='https://widgets.sociablekit.com/facebook-profile/widget.js' defer></script>
 
 <script>
 (function () {
+
+    /* ── Sprach-System ── */
     const langButtons = document.querySelectorAll('.lang-btn');
 
     function applyTranslations(lang) {
@@ -648,14 +646,14 @@
 
     langButtons.forEach(btn => btn.addEventListener('click', () => setLanguage(btn.dataset.setLang)));
     document.getElementById('year').textContent = new Date().getFullYear();
-    setLanguage('ar');
+    setLanguage('ar'); // Standard-Sprache beim Laden
 
-    /* ── YOUTUBE AUTO-FEED (kein API-Key nötig) ── */
+    /* ── YouTube Auto-Feed (kein API-Key nötig) ── */
     const YT_CH = 'UC47XW090xBlPu-BPUnAmI_A';
     const RSS   = `https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3D${YT_CH}&api_key=public&count=4`;
 
     function fmtDate(str) {
-        return new Date(str).toLocaleDateString('ar-EG', { year:'numeric', month:'short', day:'numeric' });
+        return new Date(str).toLocaleDateString('ar-EG', { year: 'numeric', month: 'short', day: 'numeric' });
     }
     function thumb(item) {
         if (item.thumbnail && item.thumbnail.startsWith('http')) return item.thumbnail;
@@ -685,9 +683,11 @@
             document.getElementById('yt-feed').innerHTML =
                 `<div class="yt-error">تعذّر تحميل الفيديوهات / Could not load videos.<br>
                  <a href="https://www.youtube.com/channel/${YT_CH}" target="_blank" style="color:#fca5a5;">
-                 → YouTube direkt öffnen</a></div>`;
+                 → YouTube direkt öffnen ↗</a></div>`;
         });
+
 })();
 </script>
+
 </body>
 </html>
