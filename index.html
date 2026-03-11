@@ -17,7 +17,6 @@
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
-
         body {
             font-family: 'Tajawal', system-ui, sans-serif;
             background:
@@ -41,8 +40,7 @@
             border-bottom: 1px solid rgba(255,255,255,0.08);
         }
         .header-inner {
-            max-width: 1120px; margin: 0 auto;
-            padding: 0.8rem 1.25rem;
+            max-width: 1120px; margin: 0 auto; padding: 0.8rem 1.25rem;
             display: flex; align-items: center; justify-content: space-between; gap: 1rem;
         }
         .brand { display: flex; align-items: center; gap: 0.75rem; }
@@ -64,37 +62,31 @@
         }
         .nav-links a:hover { border-color: rgba(148,163,184,0.6); background: rgba(15,23,42,0.8); }
         .lang-switch {
-            display: flex; align-items: center; gap: 0.25rem;
-            padding: 0.2rem; border-radius: 999px;
-            background: rgba(15,23,42,0.95); border: 1px solid rgba(51,65,85,0.9);
+            display: flex; align-items: center; gap: 0.25rem; padding: 0.2rem;
+            border-radius: 999px; background: rgba(15,23,42,0.95); border: 1px solid rgba(51,65,85,0.9);
         }
         .lang-btn {
-            padding: 0.25rem 0.6rem; border-radius: 999px;
-            font-size: 0.76rem; border: none;
-            background: transparent; color: #e5e7eb; cursor: pointer; transition: all 0.18s;
+            padding: 0.25rem 0.6rem; border-radius: 999px; font-size: 0.76rem;
+            border: none; background: transparent; color: #e5e7eb; cursor: pointer; transition: all 0.18s;
         }
         .lang-btn.active {
             background: linear-gradient(to left, var(--gold), #facc15);
-            color: #111827; font-weight: 600;
-            box-shadow: 0 0 14px rgba(250,204,21,0.5);
+            color: #111827; font-weight: 600; box-shadow: 0 0 14px rgba(250,204,21,0.5);
         }
 
         /* HERO */
         .hero { padding: 2.75rem 0 2rem; }
         .hero-grid {
-            display: grid;
-            grid-template-columns: minmax(0,1.35fr) minmax(0,1.05fr);
+            display: grid; grid-template-columns: minmax(0,1.35fr) minmax(0,1.05fr);
             gap: 2.25rem; align-items: center;
         }
         .kicker {
             font-size: 0.88rem; color: var(--gold);
-            display: flex; flex-wrap: wrap; gap: 0.5rem;
-            align-items: center; margin-bottom: 0.9rem;
+            display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 0.9rem;
         }
         .kicker-pill {
             padding: 0.15rem 0.6rem; border-radius: 999px;
-            border: 1px solid rgba(250,204,21,0.6);
-            background: rgba(23,37,84,0.8); font-size: 0.74rem;
+            border: 1px solid rgba(250,204,21,0.6); background: rgba(23,37,84,0.8); font-size: 0.74rem;
         }
         .hero-title { font-size: clamp(2rem,3.2vw,2.7rem); line-height: 1.35; margin-bottom: 0.9rem; }
         .hero-title .highlight {
@@ -115,18 +107,14 @@
             color: #111827; box-shadow: 0 12px 28px rgba(250,204,21,0.38);
         }
         .btn-primary:hover { filter: brightness(1.04); transform: translateY(-1px); }
-        .btn-secondary {
-            background: rgba(15,23,42,0.9);
-            border-color: rgba(148,163,184,0.65); color: #e5e7eb;
-        }
+        .btn-secondary { background: rgba(15,23,42,0.9); border-color: rgba(148,163,184,0.65); color: #e5e7eb; }
         .btn-secondary:hover { background: rgba(30,41,59,0.95); }
 
         /* HERO CARD */
         .hero-card {
             background: radial-gradient(circle at top, rgba(148,163,184,0.3), #020617 70%);
             border-radius: 1.4rem; padding: 1.6rem 1.5rem;
-            border: 1px solid rgba(55,65,81,0.9);
-            box-shadow: 0 22px 60px rgba(15,23,42,0.9);
+            border: 1px solid rgba(55,65,81,0.9); box-shadow: 0 22px 60px rgba(15,23,42,0.9);
         }
         .hero-card-badge {
             display: inline-flex; align-items: center; gap: 0.4rem;
@@ -138,8 +126,7 @@
         .stat-row { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 1rem; }
         .stat-card {
             flex: 1 1 120px; background: rgba(15,23,42,0.95);
-            border-radius: 0.9rem; padding: 0.8rem 0.9rem;
-            border: 1px solid rgba(55,65,81,0.95);
+            border-radius: 0.9rem; padding: 0.8rem 0.9rem; border: 1px solid rgba(55,65,81,0.95);
         }
         .stat-number { font-size: 1.05rem; font-weight: 700; color: var(--gold); margin-bottom: 0.15rem; }
         .stat-label { font-size: 0.78rem; color: var(--muted); line-height: 1.4; }
@@ -162,24 +149,17 @@
         body.rtl ul li::before { content: "•"; position: absolute; right: 0; color: var(--gold); }
         body.ltr ul li::before { content: "•"; position: absolute; left: 0; color: var(--gold); }
 
-        /* ═══════ SOCIAL MEDIA SECTION ═══════ */
+        /* SOCIAL MEDIA */
         .social-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0,1fr));
-            gap: 1.5rem;
+            display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1.5rem;
         }
-
-        /* Platform block base */
         .platform-block {
-            border-radius: 1.35rem;
-            padding: 1.4rem;
+            border-radius: 1.35rem; padding: 1.4rem;
             border: 1px solid rgba(55,65,81,0.9);
             display: flex; flex-direction: column; gap: 1rem;
-            min-height: 380px;
         }
         .platform-header {
-            display: flex; align-items: center; justify-content: space-between;
-            gap: 0.75rem;
+            display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;
         }
         .platform-title-row { display: flex; align-items: center; gap: 0.6rem; }
         .platform-icon {
@@ -197,13 +177,28 @@
         }
         .platform-content { flex: 1; }
 
-        /* YouTube */
+        /* Platform colours */
         .platform-block.yt { background: radial-gradient(circle at top left, rgba(255,0,0,0.12), rgba(15,23,42,0.98)); border-color: rgba(255,0,0,0.25); }
         .platform-icon.yt { background: rgba(255,0,0,0.15); }
         .platform-link-btn.yt { background: rgba(255,0,0,0.15); border-color: rgba(255,0,0,0.4); color: #fca5a5; }
         .platform-link-btn.yt:hover { background: rgba(255,0,0,0.25); }
 
-        /* YouTube video cards */
+        .platform-block.ig { background: radial-gradient(circle at top left, rgba(131,58,180,0.14), rgba(15,23,42,0.98)); border-color: rgba(131,58,180,0.3); }
+        .platform-icon.ig { background: linear-gradient(135deg, rgba(131,58,180,0.3), rgba(253,29,29,0.2), rgba(252,176,69,0.2)); }
+        .platform-link-btn.ig { background: rgba(131,58,180,0.15); border-color: rgba(131,58,180,0.45); color: #d8b4fe; }
+        .platform-link-btn.ig:hover { background: rgba(131,58,180,0.28); }
+
+        .platform-block.tt { background: radial-gradient(circle at top left, rgba(0,242,234,0.1), rgba(15,23,42,0.98)); border-color: rgba(0,242,234,0.2); }
+        .platform-icon.tt { background: rgba(0,242,234,0.1); }
+        .platform-link-btn.tt { background: rgba(0,242,234,0.1); border-color: rgba(0,242,234,0.35); color: #99f6e4; }
+        .platform-link-btn.tt:hover { background: rgba(0,242,234,0.2); }
+
+        .platform-block.fb { background: radial-gradient(circle at top left, rgba(24,119,242,0.12), rgba(15,23,42,0.98)); border-color: rgba(24,119,242,0.25); }
+        .platform-icon.fb { background: rgba(24,119,242,0.15); }
+        .platform-link-btn.fb { background: rgba(24,119,242,0.15); border-color: rgba(24,119,242,0.4); color: #93c5fd; }
+        .platform-link-btn.fb:hover { background: rgba(24,119,242,0.25); }
+
+        /* YouTube feed */
         #yt-feed { display: flex; flex-direction: column; gap: 0.75rem; }
         .yt-video-card {
             display: flex; gap: 0.75rem; align-items: flex-start;
@@ -214,8 +209,7 @@
         .yt-video-card:hover { border-color: rgba(255,0,0,0.5); background: rgba(30,10,10,0.6); }
         .yt-thumb {
             width: 100px; height: 58px; border-radius: 0.5rem;
-            object-fit: cover; flex-shrink: 0;
-            background: rgba(55,65,81,0.8);
+            object-fit: cover; flex-shrink: 0; background: rgba(55,65,81,0.8);
         }
         .yt-info { flex: 1; min-width: 0; }
         .yt-title {
@@ -225,25 +219,24 @@
             line-height: 1.4; margin-bottom: 0.3rem;
         }
         .yt-date { font-size: 0.72rem; color: var(--muted); }
-        .yt-loading {
-            text-align: center; padding: 2rem;
-            color: var(--muted); font-size: 0.85rem;
-        }
+        .yt-loading { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.85rem; }
         .yt-error { color: #fca5a5; font-size: 0.82rem; padding: 1rem; }
 
-        /* Instagram */
-        .platform-block.ig { background: radial-gradient(circle at top left, rgba(131,58,180,0.14), rgba(15,23,42,0.98)); border-color: rgba(131,58,180,0.3); }
-        .platform-icon.ig { background: linear-gradient(135deg, rgba(131,58,180,0.3), rgba(253,29,29,0.2), rgba(252,176,69,0.2)); }
-        .platform-link-btn.ig { background: rgba(131,58,180,0.15); border-color: rgba(131,58,180,0.45); color: #d8b4fe; }
-        .platform-link-btn.ig:hover { background: rgba(131,58,180,0.28); }
+        /* Sociablekit iframe wrapper */
+        .sk-iframe-wrap {
+            border-radius: 0.9rem; overflow: hidden;
+            border: 1px solid rgba(148,163,184,0.15);
+            background: rgba(15,23,42,0.5);
+        }
+        .sk-iframe-wrap iframe { display: block; border: none; }
+
+        /* Widget placeholder (für Instagram noch ohne Code & Facebook) */
         .widget-zone {
             flex: 1; border-radius: 0.9rem;
-            background: rgba(15,23,42,0.7);
-            border: 1px dashed rgba(148,163,184,0.3);
+            background: rgba(15,23,42,0.7); border: 1px dashed rgba(148,163,184,0.3);
             display: flex; flex-direction: column;
             align-items: center; justify-content: center;
-            text-align: center; padding: 1.2rem; gap: 0.5rem;
-            min-height: 220px;
+            text-align: center; padding: 1.2rem; gap: 0.5rem; min-height: 220px;
         }
         .widget-zone-icon { font-size: 2rem; opacity: 0.5; }
         .widget-zone-text { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
@@ -253,23 +246,10 @@
             border-radius: 999px; margin-top: 0.2rem;
         }
 
-        /* TikTok */
-        .platform-block.tt { background: radial-gradient(circle at top left, rgba(0,242,234,0.1), rgba(15,23,42,0.98)); border-color: rgba(0,242,234,0.2); }
-        .platform-icon.tt { background: rgba(0,242,234,0.1); }
-        .platform-link-btn.tt { background: rgba(0,242,234,0.1); border-color: rgba(0,242,234,0.35); color: #99f6e4; }
-        .platform-link-btn.tt:hover { background: rgba(0,242,234,0.2); }
-
-        /* Facebook */
-        .platform-block.fb { background: radial-gradient(circle at top left, rgba(24,119,242,0.12), rgba(15,23,42,0.98)); border-color: rgba(24,119,242,0.25); }
-        .platform-icon.fb { background: rgba(24,119,242,0.15); }
-        .platform-link-btn.fb { background: rgba(24,119,242,0.15); border-color: rgba(24,119,242,0.4); color: #93c5fd; }
-        .platform-link-btn.fb:hover { background: rgba(24,119,242,0.25); }
-
         /* CONTACT */
         .highlight-box {
             background: radial-gradient(circle at top right, var(--gold-soft), rgba(6,95,70,0.95));
-            border-radius: 1.35rem; padding: 1.4rem 1.5rem;
-            border: 1px solid rgba(250,204,21,0.75);
+            border-radius: 1.35rem; padding: 1.4rem 1.5rem; border: 1px solid rgba(250,204,21,0.75);
         }
         .email-pill {
             display: inline-flex; align-items: center; gap: 0.4rem;
@@ -391,7 +371,7 @@
         <p class="section-subtitle" data-t='{"ar":"صُمِّم مشروع «نورُ المعرفة» كابتكار ثقافي، اجتماعي وتعليمي يهدف إلى التعريف، تقوية وإحياء الهوية الأصيلة للأقوام العربية في أفغانستان. يسعى هذا المشروع إلى إنشاء منصة علمية، ثقافية وإعلامية تُعرّف بشكل منظم ومُوثَّق بطاقات، إنجازات وتحديات المجتمع العربي في أفغانستان أمام العالم العربي والمجتمع الدولي.","en":"The «Noor Al Marefat» project is a cultural, social and educational initiative designed to introduce, strengthen and revive the authentic identity of Arab communities in Afghanistan. It aims to build a scientific, cultural and media platform that presents the capacities, achievements and challenges of this community to the Arab world and the international community.","fa":"پروژه «نورُ المعرفة» به عنوان یک ابتکار فرهنگی، اجتماعی و آموزشی با هدف معرفی، تقویت و احیای هویت اصیل اقوام عرب در افغانستان طراحی گردیده است."}'>
             صُمِّم مشروع «نورُ المعرفة» كابتكار ثقافي، اجتماعي وتعليمي يهدف إلى التعريف، تقوية وإحياء الهوية الأصيلة للأقوام العربية في أفغانستان.
         </p>
-        <p class="section-subtitle" data-t='{"ar":"يتشكّل هذا المشروع في إطار عمل مؤسسة خيرية وشبكات إعلامية واجتماعية، ويطمح إلى جذب اهتمام القادة الواعين، والمؤسسات الثقافية، والشخصيات المؤثرة في العالم العربي من أجل فتح آفاق الدعم والتعاون.","en":"The initiative operates within the framework of a charitable foundation and through media and social networks. It seeks to attract the attention of thoughtful leaders, cultural institutions and influential figures across the Arab world in order to create opportunities for scientific, cultural and social development.","fa":"این طرح در چارچوب فعالیت‌های یک بنیاد خیریه و شبکه‌های رسانه‌ای و اجتماعی شکل گرفته و می‌کوشد با جلب توجه رهبران آگاه، نهادهای فرهنگی و شخصیت‌های اثرگذار جهان عرب، زمینه حمایت و همکاری برای توسعه این جامعه را فراهم سازد."}'>
+        <p class="section-subtitle" data-t='{"ar":"يتشكّل هذا المشروع في إطار عمل مؤسسة خيرية وشبكات إعلامية واجتماعية، ويطمح إلى جذب اهتمام القادة الواعين، والمؤسسات الثقافية، والشخصيات المؤثرة في العالم العربي من أجل فتح آفاق الدعم والتعاون.","en":"The initiative operates within the framework of a charitable foundation and through media and social networks. It seeks to attract the attention of thoughtful leaders, cultural institutions and influential figures across the Arab world in order to create opportunities for development.","fa":"این طرح در چارچوب فعالیت‌های یک بنیاد خیریه و شبکه‌های رسانه‌ای شکل گرفته و می‌کوشد با جلب توجه رهبران آگاه و نهادهای فرهنگی جهان عرب، زمینه حمایت و همکاری را فراهم سازد."}'>
             يتشكّل هذا المشروع في إطار عمل مؤسسة خيرية وشبكات إعلامية واجتماعية.
         </p>
     </section>
@@ -403,7 +383,7 @@
 
         <div class="card" style="margin-bottom:1rem;">
             <h3 class="card-title" data-t='{"ar":"١. إنشاء مركز ثقافي–علمي شامل","en":"1. Establishing a comprehensive cultural & academic centre","fa":"۱. ایجاد مرکز جامع فرهنگی و علمی"}'>١. إنشاء مركز ثقافي–علمي شامل</h3>
-            <div class="card-body" data-t='{"ar":"يهدف المشروع إلى تأسيس مركز موحَّد وشامل في أفغانستان يعمل كقاعدة للتعريف ودعم القدرات العلمية والثقافية والاجتماعية للأقوام العربية، وينسّق البرامج والأنشطة التعليمية والثقافية بشكل منظَّم.","en":"The project aims to establish a unified comprehensive cultural and scientific centre in Afghanistan that serves as a hub for presenting and supporting the academic, cultural and social capacities of Arab communities, coordinating cultural, scientific and educational activities in an organised manner.","fa":"یکی از اهداف بنیادی این ابتکار، تأسیس یک مرکز واحد و جامع فرهنگی–علمی در افغانستان است که به عنوان پایگاهی برای معرفی و حمایت از ظرفیت‌های اقوام عرب فعالیت نماید."}'>
+            <div class="card-body" data-t='{"ar":"يهدف المشروع إلى تأسيس مركز موحَّد وشامل في أفغانستان يعمل كقاعدة للتعريف ودعم القدرات العلمية والثقافية والاجتماعية للأقوام العربية، وينسّق البرامج والأنشطة التعليمية والثقافية بشكل منظَّم.","en":"The project aims to establish a unified comprehensive cultural and scientific centre in Afghanistan that serves as a hub for presenting and supporting the academic, cultural and social capacities of Arab communities, coordinating educational and cultural activities in an organised manner.","fa":"یکی از اهداف بنیادی این ابتکار، تأسیس یک مرکز واحد و جامع فرهنگی–علمی در افغانستان است که به عنوان پایگاهی برای معرفی و حمایت از ظرفیت‌های اقوام عرب فعالیت نماید."}'>
                 يهدف المشروع إلى تأسيس مركز موحَّد وشامل في أفغانستان يعمل كقاعدة للتعريف ودعم القدرات العلمية والثقافية والاجتماعية للأقوام العربية.
             </div>
         </div>
@@ -411,7 +391,7 @@
         <div class="card" style="margin-bottom:1rem;">
             <h3 class="card-title" data-t='{"ar":"٢. توثيق وتعريف الشخصيات والرصيد العلمي","en":"2. Documenting scholars and intellectual capital","fa":"۲. معرفی شخصیت‌ها و سرمایه‌های علمی جامعه عرب"}'>٢. توثيق وتعريف الشخصيات والرصيد العلمي</h3>
             <div class="card-body" data-t='{"ar":"سيعمل المشروع على رصد، توثيق وتعريف العلماء، حفظة القرآن الكريم، الشعراء، المفكرين، الباحثين وسائر الشخصيات المؤثرة من العرب في أفغانستان؛ لإبراز مكانتهم العلمية والثقافية على المستويين الوطني والدولي.","en":"The project will identify, document and present scholars, Quran memorizers, poets, thinkers, researchers and other influential Arab figures in Afghanistan, highlighting their scientific and cultural standing at both national and international levels.","fa":"در چارچوب این پروژه تلاش خواهد شد تا علما، حافظان قرآن کریم، شعرا، اندیشمندان، پژوهشگران و شخصیت‌های تأثیرگذار عرب در افغانستان شناسایی، مستندسازی و معرفی شوند."}'>
-                سيعمل المشروع على رصد، توثيق وتعريف العلماء، حفظة القرآن الكريم، الشعراء، المفكرين والباحثين من العرب في أفغانستان.
+                سيعمل المشروع على رصد، توثيق وتعريف العلماء، حفظة القرآن الكريم، الشعراء والمفكرين من العرب في أفغانستان.
             </div>
         </div>
 
@@ -444,15 +424,15 @@
         </div>
     </section>
 
-    <!-- ═══════════════════ SOCIAL MEDIA / MEDIA ═══════════════════ -->
+    <!-- SOCIAL MEDIA -->
     <section id="media">
         <div class="section-label" data-t='{"ar":"تابعونا على وسائل التواصل","en":"Follow us on social media","fa":"ما را در شبکه‌های اجتماعی دنبال کنید"}'>تابعونا على وسائل التواصل</div>
         <h2 class="section-title" data-t='{"ar":"آخر المحتوى من قنواتنا","en":"Latest content from our channels","fa":"آخرین محتوا از کانال‌های ما"}'>آخر المحتوى من قنواتنا</h2>
-        <p class="section-subtitle" data-t='{"ar":"يتحدّث الجديد من يوتيوب تلقائيًا عند نشر مقطع جديد. تابعونا أيضًا على إنستغرام وتيك توك وفيسبوك.","en":"YouTube videos update automatically whenever new content is published. Follow us also on Instagram, TikTok and Facebook.","fa":"ویدیوهای یوتیوب با هر انتشار جدید به‌صورت خودکار به‌روز می‌شوند. ما را همچنین در اینستاگرام، تیک‌تاک و فیسبوک دنبال کنید."}'>يتحدّث الجديد من يوتيوب تلقائيًا عند نشر مقطع جديد.</p>
+        <p class="section-subtitle" data-t='{"ar":"يتحدّث محتوى يوتيوب وتيك توك تلقائيًا عند نشر مقاطع جديدة. تابعونا أيضًا على إنستغرام وفيسبوك.","en":"YouTube and TikTok content updates automatically when new videos are published. Follow us also on Instagram and Facebook.","fa":"محتوای یوتیوب و تیک‌تاک با هر انتشار جدید به‌صورت خودکار به‌روز می‌شوند. ما را همچنین در اینستاگرام و فیسبوک دنبال کنید."}'>يتحدّث محتوى يوتيوب وتيك توك تلقائيًا عند نشر مقاطع جديدة.</p>
 
         <div class="social-grid">
 
-            <!-- ──── YOUTUBE (LIVE AUTOMATIC FEED) ──── -->
+            <!-- ── YOUTUBE ── -->
             <div class="platform-block yt">
                 <div class="platform-header">
                     <div class="platform-title-row">
@@ -462,7 +442,9 @@
                             <div class="platform-handle">@nooralmarefat</div>
                         </div>
                     </div>
-                    <a href="https://www.youtube.com/channel/UC47XW090xBlPu-BPUnAmI_A" target="_blank" class="platform-link-btn yt" data-t='{"ar":"القناة ↗","en":"Channel ↗","fa":"کانال ↗"}'>القناة ↗</a>
+                    <a href="https://www.youtube.com/channel/UC47XW090xBlPu-BPUnAmI_A" target="_blank"
+                       class="platform-link-btn yt"
+                       data-t='{"ar":"القناة ↗","en":"Channel ↗","fa":"کانال ↗"}'>القناة ↗</a>
                 </div>
                 <div class="platform-content">
                     <div id="yt-feed">
@@ -471,83 +453,96 @@
                 </div>
             </div>
 
-            <!-- ──── INSTAGRAM ──── -->
-            <div class="platform-block ig">
-                <div class="platform-header">
-                    <div class="platform-title-row">
-                        <div class="platform-icon ig">📸</div>
-                        <div>
-                            <div class="platform-name">Instagram</div>
-                            <div class="platform-handle">@nooralmarefat</div>
-                        </div>
-                    </div>
-                    <a href="https://www.instagram.com/nooralmarefat/" target="_blank" class="platform-link-btn ig" data-t='{"ar":"الصفحة ↗","en":"Profile ↗","fa":"پروفایل ↗"}'>الصفحة ↗</a>
-                </div>
-                <div class="platform-content">
-                    <!-- ► INSTAGRAM WIDGET: Behold.so (kostenlos) einbinden:
-                         1. Gehe zu behold.so → Konto erstellen → Instagram verbinden
-                         2. Widget-Code kopieren und hier einfügen
-                         Alternativ: EmbedSocial oder LightWidget -->
-                    <div class="widget-zone">
-                        <div class="widget-zone-icon">📸</div>
-                        <div class="widget-zone-text" data-t='{"ar":"أضف هنا كود Widget من Behold.so أو EmbedSocial لعرض المنشورات تلقائيًا","en":"Paste your Behold.so or EmbedSocial widget code here to display posts automatically","fa":"کد Widget از Behold.so یا EmbedSocial را اینجا قرار دهید تا پست‌ها به‌صورت خودکار نمایش داده شوند"}'>أضف هنا كود Widget من Behold.so أو EmbedSocial لعرض المنشورات تلقائيًا</div>
-                        <a href="https://behold.so" target="_blank" class="widget-zone-step">→ behold.so (kostenlos)</a>
-                        <a href="https://www.instagram.com/nooralmarefat/" target="_blank" class="platform-link-btn ig" style="margin-top:0.5rem;" data-t='{"ar":"زيارة الصفحة مباشرةً ↗","en":"Visit profile directly ↗","fa":"مشاهده پروفایل ↗"}'>زيارة الصفحة مباشرةً ↗</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ──── TIKTOK ──── -->
+            <!-- ── TIKTOK (SociableKIT Hashtag Feed – LIVE) ── -->
             <div class="platform-block tt">
                 <div class="platform-header">
                     <div class="platform-title-row">
                         <div class="platform-icon tt">🎵</div>
                         <div>
                             <div class="platform-name">TikTok</div>
-                            <div class="platform-handle">@nooralmarefat</div>
+                            <div class="platform-handle">#nooralmarefat</div>
                         </div>
                     </div>
-                    <a href="https://www.tiktok.com/@nooralmarefat" target="_blank" class="platform-link-btn tt" data-t='{"ar":"الحساب ↗","en":"Profile ↗","fa":"پروفایل ↗"}'>الحساب ↗</a>
+                    <a href="https://www.tiktok.com/@nooralmarefat" target="_blank"
+                       class="platform-link-btn tt"
+                       data-t='{"ar":"الحساب ↗","en":"Profile ↗","fa":"پروفایل ↗"}'>الحساب ↗</a>
                 </div>
                 <div class="platform-content">
-                    <!-- ► TIKTOK WIDGET: SociableKIT einbinden (kostenloser Free Tier):
-                         1. Gehe zu sociablekit.com → "TikTok Feed" → kostenlosen Code holen
-                         2. Widget-Code kopieren und hier einfügen -->
-                    <div class="widget-zone">
-                        <div class="widget-zone-icon">🎵</div>
-                        <div class="widget-zone-text" data-t='{"ar":"أضف هنا كود Widget من SociableKIT لعرض مقاطع تيك توك تلقائيًا","en":"Paste your SociableKIT widget code here to display TikTok videos automatically","fa":"کد Widget از SociableKIT را اینجا قرار دهید تا ویدیوهای تیک‌تاک به‌صورت خودکار نمایش داده شوند"}'>أضف هنا كود Widget من SociableKIT لعرض مقاطع تيك توك تلقائيًا</div>
-                        <a href="https://www.sociablekit.com" target="_blank" class="widget-zone-step">→ sociablekit.com (kostenlos)</a>
-                        <a href="https://www.tiktok.com/@nooralmarefat" target="_blank" class="platform-link-btn tt" style="margin-top:0.5rem;" data-t='{"ar":"زيارة حساب تيك توك ↗","en":"Visit TikTok profile ↗","fa":"مشاهده پروفایل تیک‌تاک ↗"}'>زيارة حساب تيك توك ↗</a>
+                    <div class="sk-iframe-wrap">
+                        <!-- SociableKIT TikTok Hashtag Feed – Live Widget -->
+                        <div class='sk-ww-tiktok-hashtag-feed' data-embed-id='25662144'></div>
                     </div>
                 </div>
             </div>
 
-            <!-- ──── FACEBOOK (LEER – selbst befüllen) ──── -->
+           <!-- ── INSTAGRAM ── -->
+<div class="platform-block ig">
+    <div class="platform-header">
+        <div class="platform-title-row">
+            <div class="platform-icon ig">📸</div>
+            <div>
+                <div class="platform-name">Instagram</div>
+                <div class="platform-handle">@nooralmarefat</div>
+            </div>
+        </div>
+        <a href="https://www.instagram.com/nooralmarefat/" target="_blank"
+           class="platform-link-btn ig"
+           data-t='{"ar":"الصفحة ↗","en":"Profile ↗","fa":"پروفایل ↗"}'>الصفحة ↗</a>
+    </div>
+    <div class="platform-content">
+        <div class="sk-iframe-wrap">
+            <iframe src="https://widgets.sociablekit.com/instagram-story-highlights/iframe/25662151"
+                    frameborder="0" width="100%" height="600px"
+                    style="border-radius:0.9rem; display:block;">
+            </iframe>
+        </div>
+    </div>
+</div>
+
+                    -->
+                    <div class="widget-zone">
+                        <div class="widget-zone-icon">📸</div>
+                        <div class="widget-zone-text"
+                             data-t='{"ar":"أضف كود SociableKIT أو Behold.so هنا لعرض منشورات إنستغرام تلقائيًا","en":"Paste your SociableKIT or Behold.so widget code here to display Instagram posts automatically","fa":"کد SociableKIT یا Behold.so را اینجا قرار دهید تا پست‌های اینستاگرام نمایش داده شوند"}'>أضف كود SociableKIT أو Behold.so هنا لعرض منشورات إنستغرام تلقائيًا</div>
+                        <a href="https://www.sociablekit.com" target="_blank" class="widget-zone-step">→ sociablekit.com (kostenlos)</a>
+                        <a href="https://www.instagram.com/nooralmarefat/" target="_blank"
+                           class="platform-link-btn ig" style="margin-top:0.5rem;"
+                           data-t='{"ar":"زيارة الصفحة مباشرةً ↗","en":"Visit profile directly ↗","fa":"مشاهده پروفایل ↗"}'>زيارة الصفحة مباشرةً ↗</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── FACEBOOK (Platzhalter – selbst befüllen) ── -->
             <div class="platform-block fb">
                 <div class="platform-header">
                     <div class="platform-title-row">
                         <div class="platform-icon fb">📘</div>
                         <div>
                             <div class="platform-name">Facebook</div>
-                            <div class="platform-handle" data-t='{"ar":"صفحتنا على فيسبوك","en":"Our Facebook Page","fa":"صفحه فیسبوک ما"}'>صفحتنا على فيسبوك</div>
+                            <div class="platform-handle"
+                                 data-t='{"ar":"صفحتنا على فيسبوك","en":"Our Facebook Page","fa":"صفحه فیسبوک ما"}'>صفحتنا على فيسبوك</div>
                         </div>
                     </div>
-                    <!-- FACEBOOK PAGE LINK: hier deine Facebook-URL einfügen -->
-                    <a href="https://www.facebook.com/DEINE_SEITE_HIER" target="_blank" class="platform-link-btn fb" data-t='{"ar":"الصفحة ↗","en":"Page ↗","fa":"صفحه ↗"}'>الصفحة ↗</a>
+                    <!-- DEINE FACEBOOK PAGE URL hier einfügen: -->
+                    <a href="https://www.facebook.com/DEINE_SEITE_HIER" target="_blank"
+                       class="platform-link-btn fb"
+                       data-t='{"ar":"الصفحة ↗","en":"Page ↗","fa":"صفحه ↗"}'>الصفحة ↗</a>
                 </div>
                 <div class="platform-content">
-                    <!-- ► FACEBOOK PAGE PLUGIN:
-                         1. Gehe zu: developers.facebook.com/docs/plugins/page-plugin
-                         2. Deine Page-URL eingeben → Code generieren → hier einfügen
-                         Beispiel-Code (Platzhalter):
-                         <iframe src="https://www.facebook.com/plugins/page.php?href=DEINE_PAGE_URL&tabs=timeline&width=400&height=300&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false"
-                                 width="100%" height="300" style="border:none;overflow:hidden;border-radius:0.9rem;"
-                                 scrolling="no" frameborder="0" allowfullscreen="true"
-                                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    <!--
+                    ► FACEBOOK PAGE PLUGIN (kostenlos, offiziell):
+                       1. developers.facebook.com/docs/plugins/page-plugin
+                       2. Deine Page-URL eingeben → Code generieren → unten einfügen
+                       Beispiel:
+                       <iframe src="https://www.facebook.com/plugins/page.php?href=DEINE_URL&tabs=timeline&width=400&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false"
+                               width="100%" height="500" style="border:none;overflow:hidden;border-radius:0.9rem;"
+                               scrolling="no" frameborder="0" allowfullscreen="true"
+                               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                     -->
                     <div class="widget-zone">
                         <div class="widget-zone-icon">📘</div>
-                        <div class="widget-zone-text" data-t='{"ar":"أضف هنا Facebook Page Plugin لعرض المنشورات تلقائيًا. اذهب إلى developers.facebook.com/docs/plugins/page-plugin وأدخل رابط صفحتك للحصول على الكود.","en":"Paste your Facebook Page Plugin code here. Go to developers.facebook.com/docs/plugins/page-plugin, enter your page URL and copy the generated code.","fa":"کد Facebook Page Plugin را اینجا قرار دهید. به developers.facebook.com/docs/plugins/page-plugin بروید، لینک صفحه خود را وارد کنید و کد را کپی کنید."}'>أضف هنا Facebook Page Plugin – اذهب إلى developers.facebook.com لتوليد الكود</div>
+                        <div class="widget-zone-text"
+                             data-t='{"ar":"أضف Facebook Page Plugin هنا. اذهب إلى developers.facebook.com/docs/plugins/page-plugin، أدخل رابط صفحتك واحصل على الكود.","en":"Paste your Facebook Page Plugin code here. Go to developers.facebook.com/docs/plugins/page-plugin, enter your page URL and copy the generated code.","fa":"کد Facebook Page Plugin را اینجا قرار دهید. به developers.facebook.com/docs/plugins/page-plugin بروید و کد را دریافت کنید."}'>أضف Facebook Page Plugin – اذهب إلى developers.facebook.com لتوليد الكود</div>
                         <span class="widget-zone-step">→ developers.facebook.com/docs/plugins/page-plugin</span>
                     </div>
                 </div>
@@ -584,11 +579,11 @@
             <div class="card">
                 <h3 class="card-title" data-t='{"ar":"الشفافية والتواصل","en":"Transparency & Contact","fa":"شفافیت و ارتباط"}'>الشفافية والتواصل</h3>
                 <div class="card-body">
-                    <p data-t='{"ar":"هذا الموقع منصة تعريفية وتواصلية فقط. أي تسجيل قانوني، شراكات أو آليات دعم مستقبلية ستُعلَن بشفافية تامة لجميع الأطراف المعنية.","en":"This website serves as an informational and contact platform only. Any legal registration, partnerships or future funding mechanisms will be communicated transparently to all relevant parties.","fa":"این وب‌سایت صرفاً یک بستر اطلاع‌رسانی و ارتباطی است. هرگونه ثبت قانونی، مشارکت یا ساز‌و‌کار کمک‌رسانی آینده به‌صورت شفاف به همه طرف‌های ذی‌ربط اعلام خواهد شد."}'>
+                    <p data-t='{"ar":"هذا الموقع منصة تعريفية وتواصلية فقط. أي تسجيل قانوني، شراكات أو آليات دعم مستقبلية ستُعلَن بشفافية تامة لجميع الأطراف المعنية.","en":"This website serves as an informational and contact platform only. Any legal registration, partnerships or future funding mechanisms will be communicated transparently to all relevant parties.","fa":"این وب‌سایت صرفاً یک بستر اطلاع‌رسانی و ارتباطی است. هرگونه ثبت قانونی، مشارکت یا ساز‌و‌کار کمک‌رسانی آینده به‌صورت شفاف اعلام خواهد شد."}'>
                         هذا الموقع منصة تعريفية وتواصلية فقط. أي تسجيل قانوني، شراكات أو آليات دعم مستقبلية ستُعلَن بشفافية تامة.
                     </p>
                     <p style="margin-top:0.7rem;" data-t='{"ar":"للتواصل البحثي أو الإعلامي أو للشراكة الثقافية، يُرجى مراسلتنا على البريد الإلكتروني أعلاه أو عبر واتساب.","en":"For academic, media or cultural partnership enquiries, please write to us at the email address above or contact us via WhatsApp.","fa":"برای مکاتبه پژوهشی، رسانه‌ای یا همکاری فرهنگی، لطفاً به آدرس ایمیل بالا یا از طریق واتساپ با ما تماس بگیرید."}'>
-                        للتواصل البحثي أو الإعلامي أو للشراكة الثقافية، يُرجى مراسلتنا على البريد الإلكتروني أعلاه أو عبر واتساب.
+                        للتواصل البحثي أو الإعلامي أو للشراكة الثقافية، يُرجى مراسلتنا على البريد الإلكتروني أو عبر واتساب.
                     </p>
                 </div>
             </div>
@@ -608,12 +603,12 @@
 
 </main>
 
+<!-- SociableKIT TikTok Widget Script -->
+<script src='https://widgets.sociablekit.com/tiktok-hashtag-feed/widget.js' defer></script>
+
 <script>
 (function () {
-
-    /* ── LANGUAGE ENGINE ── */
     const langButtons = document.querySelectorAll('.lang-btn');
-    let currentLang = 'ar';
 
     function applyTranslations(lang) {
         document.querySelectorAll('[data-t]').forEach(el => {
@@ -625,7 +620,6 @@
     }
 
     function setLanguage(lang) {
-        currentLang = lang;
         if (lang === 'en') {
             document.documentElement.lang = 'en';
             document.documentElement.dir = 'ltr';
@@ -651,47 +645,42 @@
     setLanguage('ar');
 
     /* ── YOUTUBE AUTO-FEED (kein API-Key nötig) ── */
-    const YT_CHANNEL_ID = 'UC47XW090xBlPu-BPUnAmI_A';
-    const RSS_API = `https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3D${YT_CHANNEL_ID}&api_key=public&count=4`;
+    const YT_CH = 'UC47XW090xBlPu-BPUnAmI_A';
+    const RSS   = `https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3D${YT_CH}&api_key=public&count=4`;
 
-    function formatDate(str) {
-        const d = new Date(str);
-        return d.toLocaleDateString('ar-EG', { year: 'numeric', month: 'short', day: 'numeric' });
+    function fmtDate(str) {
+        return new Date(str).toLocaleDateString('ar-EG', { year:'numeric', month:'short', day:'numeric' });
     }
-
-    function getThumb(item) {
+    function thumb(item) {
         if (item.thumbnail && item.thumbnail.startsWith('http')) return item.thumbnail;
         const m = item.link.match(/[?&]v=([^&]+)/);
-        if (m) return `https://img.youtube.com/vi/${m[1]}/mqdefault.jpg`;
-        return '';
+        return m ? `https://img.youtube.com/vi/${m[1]}/mqdefault.jpg` : '';
     }
 
-    fetch(RSS_API)
+    fetch(RSS)
         .then(r => r.json())
         .then(data => {
             const feed = document.getElementById('yt-feed');
-            if (!data.items || data.items.length === 0) {
+            if (!data.items || !data.items.length) {
                 feed.innerHTML = '<div class="yt-error">لا توجد فيديوهات بعد / No videos yet.</div>';
                 return;
             }
             feed.innerHTML = data.items.map(v => `
                 <a class="yt-video-card" href="${v.link}" target="_blank" rel="noopener">
-                    <img class="yt-thumb" src="${getThumb(v)}" alt="${v.title}" loading="lazy"
+                    <img class="yt-thumb" src="${thumb(v)}" alt="${v.title}" loading="lazy"
                          onerror="this.style.display='none'">
                     <div class="yt-info">
                         <div class="yt-title">${v.title}</div>
-                        <div class="yt-date">${formatDate(v.pubDate)}</div>
+                        <div class="yt-date">${fmtDate(v.pubDate)}</div>
                     </div>
-                </a>
-            `).join('');
+                </a>`).join('');
         })
         .catch(() => {
-            const feed = document.getElementById('yt-feed');
-            feed.innerHTML = `
-                <div class="yt-error">تعذّر تحميل الفيديوهات. / Could not load videos.<br>
-                <a href="https://www.youtube.com/channel/${YT_CHANNEL_ID}" target="_blank" style="color:#fca5a5;">→ YouTube-Kanal direkt öffnen</a></div>`;
+            document.getElementById('yt-feed').innerHTML =
+                `<div class="yt-error">تعذّر تحميل الفيديوهات / Could not load videos.<br>
+                 <a href="https://www.youtube.com/channel/${YT_CH}" target="_blank" style="color:#fca5a5;">
+                 → YouTube direkt öffnen</a></div>`;
         });
-
 })();
 </script>
 </body>
